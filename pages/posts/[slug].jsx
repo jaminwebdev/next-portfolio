@@ -7,9 +7,8 @@ import {
 } from "../../lib/markdownAPI";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
-import ExampleComponent from "../../components/example-component";
 
-const components = { ExampleComponent };
+const components = {};
 
 export default function Post({ post }) {
   const router = useRouter();
