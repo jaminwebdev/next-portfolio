@@ -23,8 +23,8 @@ module.exports = {
         "body-color": {
           light: "#fafaff",
           "light-secondary": "#edf2f7",
-          dark: "#2f495e",
-          "dark-secondary": "#37546d",
+          dark: "#2B4255",
+          "dark-secondary": "#334E66",
         },
       },
     },
