@@ -23,8 +23,9 @@ const ActionButton = ({
         "border-secondary border-2 text-secondary hover:bg-secondary hover:text-white",
     },
     ghost: {
-      primary: "bg-primary-medium/[0.1] text-primary-medium",
-      secondary: "bg-secondary/[0.1] text-secondary",
+      primary:
+        "bg-primary-medium/[0.15] text-primary-medium hover:bg-primary-medium/[0.25]",
+      secondary: "bg-secondary/[0.15] text-secondary hover:bg-secondary/[0.25]",
     },
   };
 
@@ -35,8 +36,14 @@ const ActionButton = ({
           px-6 py-2 
           hover:scale-105 
           transition-transform 
-          duration-200 
+          duration-100 
           ease-out 
+          grid
+          gap-2
+          grid-flow-col
+          justify-center
+          items-center
+          group
           ${variantClasses[variant][color]} `}>
       {children}
     </button>

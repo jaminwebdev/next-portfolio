@@ -1,4 +1,5 @@
 import ActionButton from "../components/buttons/ActionButton.tsx";
+import LinkButton from "../components/buttons/LinkButton.tsx";
 
 export default function Home() {
   const consoleTheLog = () => {
@@ -8,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <h1 className="text-7xl font-black">
-        Hello <span className="text-secondary">World!</span>
+        Hello <span className="text-secondary">Worlds!</span>
       </h1>
       <div className="flex space-x-5 w-full justify-center">
         <p>Blah blah blah and a blah blah</p>
@@ -32,6 +33,19 @@ export default function Home() {
             Howdy
           </ActionButton>
           <ActionButton callback={consoleTheLog}>Howdy</ActionButton>
+        </div>
+        <div className="flex space-x-4 justify-center">
+          <LinkButton
+            variant="ghost"
+            color="secondary"
+            link="/"
+            origin="external">
+            Howdy <span>things</span>
+          </LinkButton>
+          <LinkButton variant="ghost" color="secondary" link="/">
+            Howdy
+          </LinkButton>
+          <LinkButton link="/">Howdy</LinkButton>
         </div>
       </div>
     </div>
