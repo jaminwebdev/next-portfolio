@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -27,5 +29,19 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".perspective-400": {
+          perspective: "400rem",
+        },
+        ".rotate-y-65": {
+          transform: "rotateY(65deg)",
+        },
+        ".origin-left-center": {
+          "transform-origin": "left center",
+        },
+      });
+    }),
+  ],
 };
