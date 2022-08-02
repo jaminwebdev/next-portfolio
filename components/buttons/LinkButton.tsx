@@ -55,23 +55,25 @@ const LinkButton = ({
         </a>
       ) : (
         <Link href={link}>
-          <span
-            className={`rounded-md 
-            px-6 
-            py-3
-            hover:scale-105 
-            transition-transform 
-            duration-100 
-            ease-out 
-            grid
-            grid-flow-col
-            gap-2
-            justify-center
-            items-center
-            cursor-pointer
-            ${variantClasses[variant][color]}`}>
-            {children}
-          </span>
+          <a>
+            <span
+              className={`rounded-md 
+              px-6 
+              py-3
+              hover:scale-105 
+              transition-transform 
+              duration-100 
+              ease-out 
+              grid
+              grid-flow-col
+              gap-2
+              justify-center
+              items-center
+              cursor-pointer
+              ${variantClasses[variant][color]}`}>
+              {children}
+            </span>
+          </a>
         </Link>
       )}
     </>

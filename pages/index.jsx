@@ -1,6 +1,7 @@
 import ActionButton from "../components/buttons/ActionButton.tsx";
 import LinkButton from "../components/buttons/LinkButton.tsx";
 import LazyLoad from "../components/LazyLoad";
+import AppLink from "../components/AppLink";
 
 export default function Home() {
   const consoleTheLog = () => {
@@ -20,6 +21,11 @@ export default function Home() {
         <h2>Secondary Heading</h2>
         <h3>Tertiary Heading</h3>
         <h4>Another Heading</h4>
+        <div className="flex flex-wrap space-x-5 my-6 w-full justify-center">
+          <AppLink link="/about/james">James Page</AppLink>
+          <AppLink link="/about/james">James Page</AppLink>
+          <AppLink link="/about/james">James Page</AppLink>
+        </div>
         <div className="flex space-x-4 justify-center">
           <ActionButton
             variant="ghost"
