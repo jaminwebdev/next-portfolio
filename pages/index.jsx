@@ -1,5 +1,6 @@
 import ActionButton from "../components/buttons/ActionButton.tsx";
 import LinkButton from "../components/buttons/LinkButton.tsx";
+import LazyLoad from "../components/LazyLoad";
 
 export default function Home() {
   const consoleTheLog = () => {
@@ -14,7 +15,7 @@ export default function Home() {
       <div className="flex space-x-5 w-full justify-center">
         <p>Blah blah blah and a blah blah</p>
       </div>
-      <div className="min-h-[400px] bg-body-color-light-secondary dark:bg-body-color-dark-secondary">
+      <div className="min-h-screen bg-body-color-light-secondary dark:bg-body-color-dark-secondary">
         <h1>Primary Heading</h1>
         <h2>Secondary Heading</h2>
         <h3>Tertiary Heading</h3>
@@ -47,6 +48,11 @@ export default function Home() {
           </LinkButton>
           <LinkButton link="/">Howdy</LinkButton>
         </div>
+      </div>
+      <div className="max-w-md mx-auto">
+        <LazyLoad>
+          <img src="https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg" />
+        </LazyLoad>
       </div>
     </div>
   );
