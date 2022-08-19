@@ -1,6 +1,6 @@
 import { useState } from "react";
-import MobileNavigation from "../components/layout/navigation/MobileNavigation";
-import Navigation from "../components/layout/navigation/Navigation";
+import MobileNavigation from "../components/layout/navigation/MobileNavigation.tsx";
+import Navigation from "../components/layout/navigation/Navigation.tsx";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
