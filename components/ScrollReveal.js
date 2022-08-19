@@ -6,7 +6,7 @@ const ScrollReveal = ({
   delay = 0,
   duration = 0.6,
   threshold = 0.5,
-  bounce = true,
+  bounce = false,
   children,
 }) => {
   const animationControl = useAnimation();

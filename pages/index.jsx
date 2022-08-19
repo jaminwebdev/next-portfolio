@@ -17,7 +17,7 @@ export default function Home() {
       <div className="flex space-x-5 w-full justify-center">
         <p>Blah blah blah and a blah blah</p>
       </div>
-      <div className="min-h-screen bg-body-color-light-secondary dark:bg-body-color-dark-secondary">
+      <div className="py-20 bg-body-color-light-secondary dark:bg-body-color-dark-secondary">
         <h1>Primary Heading</h1>
         <h2>Secondary Heading</h2>
         <h3>Tertiary Heading</h3>
