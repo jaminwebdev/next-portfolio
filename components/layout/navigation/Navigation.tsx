@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-const Navigation = ({ toggleMobileNav }) => {
+interface NavigationProps {
+  toggleMobileNav: () => {};
+}
+
+const Navigation = ({ toggleMobileNav }: NavigationProps) => {
   return (
     <div>
       <div>

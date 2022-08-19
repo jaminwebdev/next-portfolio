@@ -1,4 +1,8 @@
-const MobileNavigation = ({ closeMobileNav }) => {
+interface MobileNavigationProps {
+  closeMobileNav: () => {};
+}
+
+const MobileNavigation = ({ closeMobileNav }: MobileNavigationProps) => {
   return (
     <div
       className={`
