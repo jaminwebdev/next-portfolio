@@ -2,10 +2,10 @@ import { motion, useAnimation, AnimatePresence, animate } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import useWindowDimensions from "../lib/useWindowDimensions";
 
-const LazyLoad = ({
+const ScrollReveal = ({
   delay = 0,
   duration = 0.6,
-  threshold = 0,
+  threshold = 0.5,
   bounce = true,
   children,
 }) => {
@@ -55,4 +55,4 @@ const LazyLoad = ({
   );
 };
 
-export default LazyLoad;
+export default ScrollReveal;

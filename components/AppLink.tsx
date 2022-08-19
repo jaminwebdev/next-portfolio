@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-const AppLink = ({ origin = "internal", link, children }) => {
+interface AppLinkProps {
+  origin: "internal" | "external";
+  link: string;
+  children: React.ReactNode;
+}
+
+const AppLink = ({ origin = "internal", link, children }: AppLinkProps) => {
   const decorationColors = {
     0: "decoration-sky-500",
     1: "decoration-pink-500",
