@@ -1,7 +1,8 @@
 import ActionButton from "../components/buttons/ActionButton.tsx";
 import LinkButton from "../components/buttons/LinkButton.tsx";
-import LazyLoad from "../components/LazyLoad";
-import AppLink from "../components/AppLink";
+import ScrollReveal from "../components/ScrollReveal";
+import AppLink from "../components/AppLink.tsx";
+import Image from "next/image";
 
 export default function Home() {
   const consoleTheLog = () => {
@@ -56,9 +57,15 @@ export default function Home() {
         </div>
       </div>
       <div className="max-w-md mx-auto">
-        <LazyLoad>
-          <img src="https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg" />
-        </LazyLoad>
+        <ScrollReveal>
+          <Image
+            src="https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg"
+            width={400}
+            height={400}
+            quality={20}
+            alt="Placeholder image"
+          />
+        </ScrollReveal>
       </div>
     </div>
   );
