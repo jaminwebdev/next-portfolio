@@ -2,6 +2,7 @@ import ActionButton from "../components/buttons/ActionButton.tsx";
 import LinkButton from "../components/buttons/LinkButton.tsx";
 import ScrollReveal from "../components/ScrollReveal";
 import AppLink from "../components/AppLink.tsx";
+import AppIcon from "../components/AppIcon.tsx";
 import Image from "next/image";
 
 export default function Home() {
@@ -29,7 +30,7 @@ export default function Home() {
         </div>
         <div className="flex space-x-4 justify-center">
           <ActionButton
-            variant="ghost"
+            variant="primary"
             color="secondary"
             callback={consoleTheLog}>
             Howdy
@@ -40,20 +41,30 @@ export default function Home() {
             callback={consoleTheLog}>
             Howdy
           </ActionButton>
-          <ActionButton callback={consoleTheLog}>Howdy</ActionButton>
+          <ActionButton variant="outlined" callback={consoleTheLog}>
+            Howdy
+          </ActionButton>
         </div>
         <div className="flex space-x-4 justify-center">
           <LinkButton
-            variant="ghost"
+            variant="primary"
             color="secondary"
             link="/"
             origin="external">
-            Howdy <span>things</span>
+            Primary
+            <AppIcon icon="linkedin" classNames="w-4 fill-white" />
           </LinkButton>
           <LinkButton variant="ghost" color="secondary" link="/">
-            Howdy
+            Ghost
+            <AppIcon icon="eyes" classNames="w-7 fill-secondary" />
           </LinkButton>
-          <LinkButton link="/">Howdy</LinkButton>
+          <LinkButton link="/" variant="outlined">
+            <AppIcon
+              icon="paperPlane"
+              classNames="w-4 stroke-secondary group-hover:stroke-white"
+            />
+            Outlined
+          </LinkButton>
         </div>
       </div>
       <div className="max-w-md mx-auto">

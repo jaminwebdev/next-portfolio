@@ -50,6 +50,7 @@ const LinkButton = ({
             gap-2
             justify-center
             items-center
+            group
             ${variantClasses[variant][color]}`}>
           {children}
         </a>
@@ -60,6 +61,7 @@ const LinkButton = ({
               className={`rounded-md 
               px-6 
               py-3
+              h-full
               hover:scale-105 
               transition-transform 
               duration-100 
@@ -70,6 +72,7 @@ const LinkButton = ({
               justify-center
               items-center
               cursor-pointer
+              group
               ${variantClasses[variant][color]}`}>
               {children}
             </span>
