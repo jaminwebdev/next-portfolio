@@ -4,7 +4,7 @@ import Navigation from "../components/layout/navigation/Navigation.tsx";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  const [mobileOpen, setMobileOpen] = useState(true);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const toggleMobileNavVisibility = () => {
     setMobileOpen((status) => !status);

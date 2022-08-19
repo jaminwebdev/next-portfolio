@@ -1,8 +1,8 @@
-import ActionButton from "../components/buttons/ActionButton.tsx";
-import LinkButton from "../components/buttons/LinkButton.tsx";
+import ActionButton from "../components/buttons/ActionButton";
+import LinkButton from "../components/buttons/LinkButton";
 import ScrollReveal from "../components/ScrollReveal";
-import AppLink from "../components/AppLink.tsx";
-import AppIcon from "../components/AppIcon.tsx";
+import AppLink from "../components/AppLink";
+import AppIcon from "../components/AppIcon";
 import Image from "next/image";
 
 export default function Home() {
