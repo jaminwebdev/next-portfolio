@@ -1,4 +1,4 @@
-import Link from "../../node_modules/next/link";
+import Link from "next/link";
 
 interface LinkButtonProps {
   variant: "primary" | "outline" | "ghost";

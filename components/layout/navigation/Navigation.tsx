@@ -1,4 +1,6 @@
 import Link from "next/link";
+import DesktopNavigation from "./DesktopNavigation";
+import AppIcon from "../../AppIcon";
 
 interface NavigationProps {
   toggleMobileNav: () => {};
@@ -6,16 +8,20 @@ interface NavigationProps {
 
 const Navigation = ({ toggleMobileNav }: NavigationProps) => {
   return (
-    <div>
-      <div>
+    <nav className="fixed top-7 left-[50%] -translate-x-1/2 mx-auto w-full max-w-7xl z-[1000]">
+      <div className="px-6 lg:px-14 py-3 mx-3 lg:mx-auto relative grid grid-cols-3 items-center -mb-28 bg-white dark:bg-body-color-dark-secondary rounded-3xl shadow-xl shadow-primary-dark/5 dark:shadow-body-color-dark">
         <Link href="/">
-          <a>Navigation</a>
+          <a>Home</a>
         </Link>
+        <DesktopNavigation styles="hidden lg:grid" />
+        <div onClick={toggleMobileNav} className="justify-self-end col-start-3">
+          <AppIcon
+            icon="menu"
+            classNames="inline-block lg:hidden fill-primary-medium dark:fill-body-text-light w-5 cursor-pointer"
+          />
+        </div>
       </div>
-      <div>
-        <p onClick={toggleMobileNav}>toggle</p>
-      </div>
-    </div>
+    </nav>
   );
 };
 
