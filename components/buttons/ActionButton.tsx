@@ -1,6 +1,7 @@
 interface ActionButtonProps {
   variant: "primary" | "outline" | "ghost";
   color: "primary" | "secondary";
+  type: "submit" | "button" | "reset";
   callback: any;
   children: React.ReactNode;
 }
@@ -8,6 +9,7 @@ interface ActionButtonProps {
 const ActionButton = ({
   variant = "primary",
   color = "secondary",
+  type,
   callback,
   children,
 }: ActionButtonProps) => {
@@ -31,6 +33,7 @@ const ActionButton = ({
 
   return (
     <button
+      type={type}
       onClick={callback}
       className={`rounded-md 
           px-6 py-2 
