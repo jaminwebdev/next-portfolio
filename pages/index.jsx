@@ -3,6 +3,7 @@ import LinkButton from "../components/buttons/LinkButton";
 import ScrollReveal from "../components/ScrollReveal";
 import AppLink from "../components/AppLink";
 import AppIcon from "../components/AppIcon";
+import ConnectForm from "../components/forms/connect/ConnectForm";
 import Image from "next/image";
 
 export default function Home() {
@@ -66,6 +67,9 @@ export default function Home() {
             Outlined
           </LinkButton>
         </div>
+      </div>
+      <div className="p-20 max-w-4xl mx-auto bg-body-color-light-secondary dark:bg-body-color-dark-secondary">
+        <ConnectForm />
       </div>
       <div className="max-w-md mx-auto">
         <ScrollReveal>

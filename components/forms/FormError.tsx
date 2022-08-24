@@ -8,7 +8,7 @@ import {
 import { Dispatch, SetStateAction } from "react";
 
 interface FormErrorProps {
-  name: "string";
+  name: string;
   setFormStatus: Dispatch<SetStateAction<string>>;
 }
 

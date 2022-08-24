@@ -6,7 +6,7 @@ import {
 } from "../../lib/animations";
 
 interface FormSuccessProps {
-  name: "string";
+  name: string;
 }
 
 const FormSuccess = ({ name }: FormSuccessProps) => {

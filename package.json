@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^12.2.5",
+    "axios": "^0.27.2",
     "framer-motion": "^6.5.1",
     "gray-matter": "4.0.3",
     "lottie-web": "^5.9.6",
