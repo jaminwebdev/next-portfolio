@@ -5,65 +5,55 @@ import {
   fadeGrowAnimate,
   fadeShrinkExit,
 } from "../../../lib/animations";
+import useWindowDimensions from "../../../lib/useWindowDimensions";
 import ActionButton from "../../buttons/ActionButton";
 
-const FirstStep = ({ register, getFieldState, stepControl, trigger }) => {
+const FirstStep = ({
+  register,
+  getFieldState,
+  stepControl,
+  trigger,
+  touchedFields,
+  setFocus,
+}) => {
+  const { windowWidth } = useWindowDimensions();
+
   const triggerValidation = useCallback(async () => await trigger(), [trigger]);
 
   useEffect(() => {
+    if (windowWidth > 800) {
+      setFocus("Name");
+    }
     triggerValidation();
-  }, [triggerValidation]);
+  }, [setFocus, triggerValidation, windowWidth]);
 
   return (
     <>
+      <label htmlFor="Name" className="mb-4 block">
+        First, what should I call you, friend?
+      </label>
+      <input
+        type="text"
+        {...register("Name", { required: true })}
+        className="mb-4"
+        placeholder="Your name"
+      />
+
+      <AnimatePresence>
+        {getFieldState("Name").invalid && touchedFields.Name ? (
+          <motion.div
+            initial={fadeGrowInitial}
+            animate={fadeGrowAnimate}
+            exit={fadeShrinkExit}>
+            <p className="py-1 px-4 bg-slate-300 dark:bg-body-color-dark-secondary">
+              This field is required
+            </p>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
       <div className="grid gap-2">
-        <p>
-          <strong>What can we help you with? *</strong>
-        </p>
-        <label>
-          <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
-            <input
-              type="checkbox"
-              {...register("Interest", { required: true })}
-              value="SEO"
-            />
-            SEO
-          </div>
-        </label>
-        <label>
-          <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
-            <input type="checkbox" {...register("Interest")} value="Content" />
-            Content
-          </div>
-        </label>
-        <label>
-          <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
-            <input
-              type="checkbox"
-              {...register("Interest")}
-              value="Web Design Dev"
-            />
-            Web Design/Development
-          </div>
-        </label>
-        <label>
-          <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
-            <input
-              type="checkbox"
-              {...register("Interest")}
-              value="Advertising"
-            />
-            Advertising
-          </div>
-        </label>
-        <label>
-          <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
-            <input type="checkbox" {...register("Interest")} value="Unsure" />
-            Not Sure
-          </div>
-        </label>
         <AnimatePresence>
-          {!getFieldState("Interest").invalid ? (
+          {!getFieldState("Name").invalid ? (
             <div className="mt-4 justify-self-end">
               <motion.div
                 initial={fadeGrowInitial}

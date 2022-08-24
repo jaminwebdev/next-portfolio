@@ -6,52 +6,47 @@ import {
   fadeShrinkExit,
 } from "../../../lib/animations";
 import ActionButton from "../../buttons/ActionButton";
-import useWindowDimensions from "../../../lib/useWindowDimensions";
+import AppIcon from "../../AppIcon";
 
 const FifthStep = ({
   register,
   getFieldState,
   stepControl,
-  setFocus,
   trigger,
   getValues,
+  touchedFields,
 }) => {
-  const { windowWidth } = useWindowDimensions();
-
   const triggerValidation = useCallback(async () => await trigger(), [trigger]);
 
   useEffect(() => {
-    if (windowWidth > 800) {
-      setFocus("AdditionalQuestions");
-    }
     triggerValidation();
-  }, [setFocus, triggerValidation, windowWidth]);
+  }, [triggerValidation]);
 
   return (
     <>
-      <label htmlFor="AdditionalQuestions" className="mb-4 block">
-        Any additional questions we should come prepared to answer for you?
+      <label htmlFor="ContactMethod" className="mb-4 block">
+        What&apos;s your preferred method of contact, {getValues("Name")}?
       </label>
-      <textarea
-        {...register("AdditionalQuestions", { maxLength: 200 })}
-        placeholder="Anything else?"
-        rows={6}
-        className="py-1 px-2 resize-none w-full"
-      />
-      <p className="mt-2">
-        Please keep it brief - max characters 200. Characters left:
-        {200 - getValues("AdditionalQuestions").length}
-      </p>
+      <select {...register("ContactMethod")} className="mb-4">
+        <option>Email</option>
+        <option>Phone</option>
+        <option>LinkedIn</option>
+        <option>Instagram</option>
+      </select>
+
+      <label htmlFor="ContactValue" className="mb-4 block">
+        What&apos;s your {getValues("ContactMethod")}? *
+      </label>
+      <input type="text" {...register("ContactValue", { required: true })} />
+
       <AnimatePresence>
-        {getFieldState("AdditionalQuestions").invalid ? (
+        {getFieldState("ContactValue").invalid && touchedFields.ContactValue ? (
           <motion.div
-            key="AdditionalQuestionsMessage"
             initial={fadeGrowInitial}
             animate={fadeGrowAnimate}
             exit={fadeShrinkExit}>
             <p className="py-1 px-4 bg-slate-300 dark:bg-body-color-dark-secondary">
-              You&apos;ve surpassed the character limit. Please keep it under
-              200 characters.
+              This field is required
             </p>
           </motion.div>
         ) : null}
@@ -72,13 +67,16 @@ const FifthStep = ({
               initial={fadeGrowInitial}
               animate={fadeGrowAnimate}
               exit={fadeShrinkExit}
-              className="justify-self-start">
+              className="justify-self-end">
               <ActionButton
                 variant="primary"
                 color="secondary"
                 callback={() => {}}
                 type="submit">
-                Let&apos;s Do This!
+                Submit
+                <AppIcon
+                  icon="paperPlane"
+                  classNames="w-4 stroke-white"></AppIcon>
               </ActionButton>
             </motion.div>
           ) : null}

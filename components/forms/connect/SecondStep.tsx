@@ -16,71 +16,89 @@ const SecondStep = ({ register, stepControl, trigger, getValues }) => {
 
   return (
     <>
-      <div className="grid gap-2">
-        <p className="mb-2">Do you have a website already? *</p>
-
-        <label className="grid grid-cols-[auto,1fr] gap-2">
+      <p className="mb-3">
+        <strong>
+          Awesome. Thanks, {getValues("Name")}. What sort of project are you
+          working on? *
+        </strong>
+      </p>
+      <label>
+        <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
           <input
-            type="radio"
-            name="WebsiteExistence"
-            value="true"
-            {...register("WebsiteExistence", { required: true })}
+            type="checkbox"
+            {...register("Interest", { required: true })}
+            value="I need a brand new website"
           />
-          Yes
-        </label>
-        <label className="grid grid-cols-[auto,1fr] gap-2">
+          I need a brand new website
+        </div>
+      </label>
+      <label>
+        <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
           <input
-            type="radio"
-            name="WebsiteExistence"
-            value="false"
-            {...register("WebsiteExistence", { required: true })}
+            type="checkbox"
+            {...register("Interest")}
+            value="My website is slow/buggy"
           />
-          No
-        </label>
-
+          My website is slow/buggy
+        </div>
+      </label>
+      <label>
+        <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
+          <input
+            type="checkbox"
+            {...register("Interest")}
+            value="My SEO is poor"
+          />
+          My SEO is poor
+        </div>
+      </label>
+      <label>
+        <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
+          <input
+            type="checkbox"
+            {...register("Interest")}
+            value="My website doesn't convert well"
+          />
+          My website doesn&apos;t convert well
+        </div>
+      </label>
+      <label>
+        <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
+          <input
+            type="checkbox"
+            {...register("Interest")}
+            value="I'm not sure. I'd like to chat"
+          />
+          I&apos;m not sure. I&pos;d like to chat
+        </div>
+      </label>
+      <div className="grid grid-cols-2 mt-4">
+        <div className="justify-self-start">
+          <ActionButton
+            callback={() => stepControl("prev")}
+            variant="ghost"
+            color="secondary"
+            type="button">
+            Previous
+          </ActionButton>
+        </div>
         <AnimatePresence>
-          {getValues("WebsiteExistence") === "true" ? (
+          {getValues("Interest").length > 0 ? (
             <motion.div
               initial={fadeGrowInitial}
               animate={fadeGrowAnimate}
               exit={fadeShrinkExit}
-              className="grid mt-4">
-              <label htmlFor="WebsiteUrl" className="mb-3">
-                What&apos;s your website&apos;s URL?
-              </label>
-              <input type="text" {...register("WebsiteUrl")} />
+              className="justify-self-end">
+              <ActionButton
+                variant="primary"
+                color="secondary"
+                callback={() => stepControl("next")}
+                type="button">
+                Next
+              </ActionButton>
             </motion.div>
           ) : null}
         </AnimatePresence>
-
-        <div className="grid grid-cols-2 mt-4">
-          <div className="justify-self-start">
-            <ActionButton
-              callback={() => stepControl("prev")}
-              variant="ghost"
-              color="secondary"
-              type="button">
-              Previous
-            </ActionButton>
-          </div>
-          <AnimatePresence>
-            {getValues("WebsiteExistence") !== null ? (
-              <motion.div
-                initial={fadeGrowInitial}
-                animate={fadeGrowAnimate}
-                exit={fadeShrinkExit}
-                className="justify-self-start">
-                <ActionButton
-                  variant="primary"
-                  color="secondary"
-                  callback={() => stepControl("next")}
-                  type="button">
-                  Next
-                </ActionButton>
-              </motion.div>
-            ) : null}
-          </AnimatePresence>
-        </div>
       </div>
     </>
   );

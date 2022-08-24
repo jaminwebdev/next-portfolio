@@ -15,7 +15,6 @@ const FourthStep = ({
   setFocus,
   trigger,
   getValues,
-  touchedFields,
 }) => {
   const { windowWidth } = useWindowDimensions();
 
@@ -23,63 +22,40 @@ const FourthStep = ({
 
   useEffect(() => {
     if (windowWidth > 800) {
-      setFocus("Name");
+      setFocus("WebsiteDetails");
     }
     triggerValidation();
   }, [setFocus, triggerValidation, windowWidth]);
 
   return (
     <>
-      <label htmlFor="Name" className="mb-4 block">
-        What&apos;s your name? *
+      <label htmlFor="WebsiteDetails" className="mb-4 block">
+        Briefly explain what your site/business does or needs to do:
       </label>
-      <input
-        type="text"
-        {...register("Name", { required: true })}
-        className="mb-4"
+      <textarea
+        {...register("WebsiteDetails", { maxLength: 200 })}
+        placeholder="Website needs and wants"
+        rows={6}
+        className="py-1 px-2 resize-none w-full"
       />
-
+      <p className="mt-2">
+        Please keep it brief - max characters 200. Characters left:
+        {200 - getValues("WebsiteDetails").length}
+      </p>
       <AnimatePresence>
-        {getFieldState("Name").invalid && touchedFields.Name ? (
+        {getFieldState("WebsiteDetails").invalid ? (
           <motion.div
+            key="WebsiteDetailsMessage"
             initial={fadeGrowInitial}
             animate={fadeGrowAnimate}
             exit={fadeShrinkExit}>
             <p className="py-1 px-4 bg-slate-300 dark:bg-body-color-dark-secondary">
-              This field is required
+              You&apos;ve surpassed the character limit. Please keep it under
+              200 characters.
             </p>
           </motion.div>
         ) : null}
       </AnimatePresence>
-
-      <label htmlFor="ContactMethod" className="mb-4 block">
-        What&apos;s your preferred method of contact, {getValues("Name")}?
-      </label>
-      <select {...register("ContactMethod")} className="mb-4">
-        <option>Email</option>
-        <option>Phone</option>
-        <option>LinkedIn</option>
-        <option>Instagram</option>
-      </select>
-
-      <label htmlFor="ContactValue" className="mb-4 block">
-        What&apos;s your {getValues("ContactMethod")}? *
-      </label>
-      <input type="text" {...register("ContactValue", { required: true })} />
-
-      <AnimatePresence>
-        {getFieldState("ContactValue").invalid && touchedFields.ContactValue ? (
-          <motion.div
-            initial={fadeGrowInitial}
-            animate={fadeGrowAnimate}
-            exit={fadeShrinkExit}>
-            <p className="py-1 px-4 bg-slate-300 dark:bg-body-color-dark-secondary">
-              This field is required
-            </p>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-
       <div className="grid grid-cols-2 mt-4">
         <div className="justify-self-start">
           <ActionButton
@@ -97,7 +73,7 @@ const FourthStep = ({
               initial={fadeGrowInitial}
               animate={fadeGrowAnimate}
               exit={fadeShrinkExit}
-              className="justify-self-start">
+              className="justify-self-end">
               <ActionButton
                 variant="primary"
                 color="secondary"

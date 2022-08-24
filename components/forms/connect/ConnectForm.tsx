@@ -39,7 +39,6 @@ const ConnectForm = () => {
       Name: "",
       ContactMethod: "Email",
       ContactValue: "",
-      AdditionalQuestions: "",
     },
   });
 
@@ -120,6 +119,8 @@ const ConnectForm = () => {
                       getFieldState={getFieldState}
                       stepControl={changeStep}
                       trigger={trigger}
+                      touchedFields={touchedFields}
+                      setFocus={setFocus}
                     />
                   </Step>
                 )}
@@ -154,7 +155,6 @@ const ConnectForm = () => {
                       setFocus={setFocus}
                       trigger={trigger}
                       getValues={getValues}
-                      touchedFields={touchedFields}
                     />
                   </Step>
                 )}
@@ -164,9 +164,9 @@ const ConnectForm = () => {
                       register={register}
                       getFieldState={getFieldState}
                       stepControl={changeStep}
-                      setFocus={setFocus}
                       trigger={trigger}
                       getValues={getValues}
+                      touchedFields={touchedFields}
                     />
                   </Step>
                 )}

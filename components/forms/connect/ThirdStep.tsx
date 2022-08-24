@@ -6,7 +6,6 @@ import {
   fadeShrinkExit,
 } from "../../../lib/animations";
 import ActionButton from "../../buttons/ActionButton";
-import useWindowDimensions from "../../../lib/useWindowDimensions";
 
 const ThirdStep = ({
   register,
@@ -16,43 +15,46 @@ const ThirdStep = ({
   trigger,
   getValues,
 }) => {
-  const { windowWidth } = useWindowDimensions();
-
   const triggerValidation = useCallback(async () => await trigger(), [trigger]);
 
   useEffect(() => {
-    if (windowWidth > 800) {
-      setFocus("WebsiteDetails");
-    }
     triggerValidation();
-  }, [setFocus, triggerValidation, windowWidth]);
+  }, [triggerValidation]);
 
   return (
     <>
-      <label htmlFor="WebsiteDetails" className="mb-4 block">
-        Briefly explain what your site/business does or needs to do:
+      <p className="mb-2">Do you have a website already? *</p>
+
+      <label className="grid grid-cols-[auto,1fr] gap-2">
+        <input
+          type="radio"
+          name="WebsiteExistence"
+          value="true"
+          {...register("WebsiteExistence", { required: true })}
+        />
+        Yes
       </label>
-      <textarea
-        {...register("WebsiteDetails", { maxLength: 200 })}
-        placeholder="Website needs and wants"
-        rows={6}
-        className="py-1 px-2 resize-none w-full"
-      />
-      <p className="mt-2">
-        Please keep it brief - max characters 200. Characters left:
-        {200 - getValues("WebsiteDetails").length}
-      </p>
+      <label className="grid grid-cols-[auto,1fr] gap-2">
+        <input
+          type="radio"
+          name="WebsiteExistence"
+          value="false"
+          {...register("WebsiteExistence", { required: true })}
+        />
+        No
+      </label>
+
       <AnimatePresence>
-        {getFieldState("WebsiteDetails").invalid ? (
+        {getValues("WebsiteExistence") === "true" ? (
           <motion.div
-            key="WebsiteDetailsMessage"
             initial={fadeGrowInitial}
             animate={fadeGrowAnimate}
-            exit={fadeShrinkExit}>
-            <p className="py-1 px-4 bg-slate-300 dark:bg-body-color-dark-secondary">
-              You&apos;ve surpassed the character limit. Please keep it under
-              200 characters.
-            </p>
+            exit={fadeShrinkExit}
+            className="grid mt-4">
+            <label htmlFor="WebsiteUrl" className="mb-3">
+              What&apos;s your website&apos;s URL?
+            </label>
+            <input type="text" {...register("WebsiteUrl")} />
           </motion.div>
         ) : null}
       </AnimatePresence>
@@ -72,7 +74,7 @@ const ThirdStep = ({
               initial={fadeGrowInitial}
               animate={fadeGrowAnimate}
               exit={fadeShrinkExit}
-              className="justify-self-start">
+              className="justify-self-end">
               <ActionButton
                 variant="primary"
                 color="secondary"
