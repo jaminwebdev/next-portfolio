@@ -7,6 +7,8 @@ import {
 } from "../../../lib/animations";
 import useWindowDimensions from "../../../lib/useWindowDimensions";
 import ActionButton from "../../buttons/ActionButton";
+import AppIcon from "../../AppIcon";
+import Message from "../../Message";
 
 const FirstStep = ({
   register,
@@ -29,13 +31,13 @@ const FirstStep = ({
 
   return (
     <>
-      <label htmlFor="Name" className="mb-4 block">
+      <label htmlFor="Name" className="block mb-1 font-bold">
         First, what should I call you, friend?
       </label>
       <input
         type="text"
         {...register("Name", { required: true })}
-        className="mb-4"
+        className="w-full rounded-md h-10 px-3 text-gray-700 placeholder-gray-400 outline-none border-2 border-transparent focus:border-secondary/60"
         placeholder="Your name"
       />
 
@@ -45,9 +47,9 @@ const FirstStep = ({
             initial={fadeGrowInitial}
             animate={fadeGrowAnimate}
             exit={fadeShrinkExit}>
-            <p className="py-1 px-4 bg-slate-300 dark:bg-body-color-dark-secondary">
-              This field is required
-            </p>
+            <Message>
+              <p>This field is required</p>
+            </Message>
           </motion.div>
         ) : null}
       </AnimatePresence>
@@ -66,6 +68,7 @@ const FirstStep = ({
                   type="button"
                   data-cy="GeneralMultiStepFirstStepNextBtn">
                   Next
+                  <AppIcon icon="arrowRight" classNames="w-3 fill-white" />
                 </ActionButton>
               </motion.div>
             </div>

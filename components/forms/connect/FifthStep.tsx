@@ -58,11 +58,12 @@ const FifthStep = ({
             variant="ghost"
             color="secondary"
             type="button">
+            <AppIcon icon="arrowLeft" classNames="w-3 fill-secondary" />
             Previous
           </ActionButton>
         </div>
         <AnimatePresence>
-          {!getFieldState("AdditionalQuestions").invalid ? (
+          {!getFieldState("ContactValue").invalid ? (
             <motion.div
               initial={fadeGrowInitial}
               animate={fadeGrowAnimate}

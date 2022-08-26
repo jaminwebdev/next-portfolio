@@ -6,6 +6,7 @@ import {
   fadeShrinkExit,
 } from "../../../lib/animations";
 import ActionButton from "../../buttons/ActionButton";
+import AppIcon from "../../AppIcon";
 
 const SecondStep = ({ register, stepControl, trigger, getValues }) => {
   const triggerValidation = useCallback(async () => await trigger(), [trigger]);
@@ -22,9 +23,10 @@ const SecondStep = ({ register, stepControl, trigger, getValues }) => {
           working on? *
         </strong>
       </p>
-      <label>
+      <label className="block mb-2">
         <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
           <input
+            className="w-5 h-5 accent-primary-medium"
             type="checkbox"
             {...register("Interest", { required: true })}
             value="I need a brand new website"
@@ -32,9 +34,10 @@ const SecondStep = ({ register, stepControl, trigger, getValues }) => {
           I need a brand new website
         </div>
       </label>
-      <label>
+      <label className="block mb-2">
         <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
           <input
+            className="w-5 h-5 accent-primary-medium"
             type="checkbox"
             {...register("Interest")}
             value="My website is slow/buggy"
@@ -42,9 +45,10 @@ const SecondStep = ({ register, stepControl, trigger, getValues }) => {
           My website is slow/buggy
         </div>
       </label>
-      <label>
+      <label className="block mb-2">
         <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
           <input
+            className="w-5 h-5 accent-primary-medium"
             type="checkbox"
             {...register("Interest")}
             value="My SEO is poor"
@@ -52,9 +56,10 @@ const SecondStep = ({ register, stepControl, trigger, getValues }) => {
           My SEO is poor
         </div>
       </label>
-      <label>
+      <label className="block mb-2">
         <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
           <input
+            className="w-5 h-5 accent-primary-medium"
             type="checkbox"
             {...register("Interest")}
             value="My website doesn't convert well"
@@ -62,9 +67,10 @@ const SecondStep = ({ register, stepControl, trigger, getValues }) => {
           My website doesn&apos;t convert well
         </div>
       </label>
-      <label>
+      <label className="block mb-2">
         <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
           <input
+            className="w-5 h-5 accent-primary-medium"
             type="checkbox"
             {...register("Interest")}
             value="I'm not sure. I'd like to chat"
@@ -79,6 +85,7 @@ const SecondStep = ({ register, stepControl, trigger, getValues }) => {
             variant="ghost"
             color="secondary"
             type="button">
+            <AppIcon icon="arrowLeft" classNames="w-3 fill-secondary" />
             Previous
           </ActionButton>
         </div>
@@ -95,6 +102,7 @@ const SecondStep = ({ register, stepControl, trigger, getValues }) => {
                 callback={() => stepControl("next")}
                 type="button">
                 Next
+                <AppIcon icon="arrowRight" classNames="w-3 fill-white" />
               </ActionButton>
             </motion.div>
           ) : null}

@@ -6,15 +6,9 @@ import {
   fadeShrinkExit,
 } from "../../../lib/animations";
 import ActionButton from "../../buttons/ActionButton";
+import AppIcon from "../../AppIcon";
 
-const ThirdStep = ({
-  register,
-  getFieldState,
-  stepControl,
-  setFocus,
-  trigger,
-  getValues,
-}) => {
+const ThirdStep = ({ register, stepControl, trigger, getValues }) => {
   const triggerValidation = useCallback(async () => await trigger(), [trigger]);
 
   useEffect(() => {
@@ -65,6 +59,7 @@ const ThirdStep = ({
             variant="ghost"
             color="secondary"
             type="button">
+            <AppIcon icon="arrowLeft" classNames="w-3 fill-secondary" />
             Previous
           </ActionButton>
         </div>
@@ -81,6 +76,7 @@ const ThirdStep = ({
                 callback={() => stepControl("next")}
                 type="button">
                 Next
+                <AppIcon icon="arrowRight" classNames="w-3 fill-white" />
               </ActionButton>
             </motion.div>
           ) : null}

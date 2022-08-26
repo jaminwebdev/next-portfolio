@@ -138,9 +138,7 @@ const ConnectForm = () => {
                   <Step key={3}>
                     <ThirdStep
                       register={register}
-                      getFieldState={getFieldState}
                       stepControl={changeStep}
-                      setFocus={setFocus}
                       trigger={trigger}
                       getValues={getValues}
                     />
