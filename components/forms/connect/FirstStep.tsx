@@ -31,7 +31,7 @@ const FirstStep = ({
 
   return (
     <>
-      <label htmlFor="Name" className="block mb-1 font-bold">
+      <label htmlFor="Name" className="block mb-2 font-bold">
         First, what should I call you, friend?
       </label>
       <input

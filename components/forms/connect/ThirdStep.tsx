@@ -17,22 +17,24 @@ const ThirdStep = ({ register, stepControl, trigger, getValues }) => {
 
   return (
     <>
-      <p className="mb-2">Do you have a website already? *</p>
+      <p className="block mb-2 font-bold">Do you have a website already? *</p>
 
-      <label className="grid grid-cols-[auto,1fr] gap-2">
+      <label className="grid grid-cols-[auto,1fr] gap-2 items-center">
         <input
           type="radio"
           name="WebsiteExistence"
           value="true"
+          className="w-4 h-4 accent-primary-medium"
           {...register("WebsiteExistence", { required: true })}
         />
         Yes
       </label>
-      <label className="grid grid-cols-[auto,1fr] gap-2">
+      <label className="grid grid-cols-[auto,1fr] gap-2 items-center">
         <input
           type="radio"
           name="WebsiteExistence"
           value="false"
+          className="w-4 h-4 accent-primary-medium"
           {...register("WebsiteExistence", { required: true })}
         />
         No
@@ -45,10 +47,15 @@ const ThirdStep = ({ register, stepControl, trigger, getValues }) => {
             animate={fadeGrowAnimate}
             exit={fadeShrinkExit}
             className="grid mt-4">
-            <label htmlFor="WebsiteUrl" className="mb-3">
+            <label htmlFor="WebsiteUrl" className="block mb-2 font-bold">
               What&apos;s your website&apos;s URL?
             </label>
-            <input type="text" {...register("WebsiteUrl")} />
+            <input
+              type="text"
+              {...register("WebsiteUrl")}
+              placeholder="Website URL"
+              className="w-full rounded-md h-10 px-3 text-gray-700 placeholder-gray-400 outline-none border-2 border-transparent focus:border-secondary/60"
+            />
           </motion.div>
         ) : null}
       </AnimatePresence>

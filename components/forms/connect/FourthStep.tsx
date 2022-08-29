@@ -7,6 +7,7 @@ import {
 } from "../../../lib/animations";
 import ActionButton from "../../buttons/ActionButton";
 import AppIcon from "../../AppIcon";
+import Message from "../../Message";
 import useWindowDimensions from "../../../lib/useWindowDimensions";
 
 const FourthStep = ({
@@ -30,14 +31,14 @@ const FourthStep = ({
 
   return (
     <>
-      <label htmlFor="WebsiteDetails" className="mb-4 block">
+      <label htmlFor="WebsiteDetails" className="block mb-2 font-bold">
         Briefly explain what your site/business does or needs to do:
       </label>
       <textarea
         {...register("WebsiteDetails", { maxLength: 200 })}
         placeholder="Website needs and wants"
         rows={6}
-        className="py-1 px-2 resize-none w-full"
+        className="py-2 px-3 w-full rounded-md resize-none placeholder-gray-400 outline-none border-2 border-transparent focus:border-secondary/60"
       />
       <p className="mt-2">
         Please keep it brief - max characters 200. Characters left:
@@ -50,10 +51,12 @@ const FourthStep = ({
             initial={fadeGrowInitial}
             animate={fadeGrowAnimate}
             exit={fadeShrinkExit}>
-            <p className="py-1 px-4 bg-slate-300 dark:bg-body-color-dark-secondary">
-              You&apos;ve surpassed the character limit. Please keep it under
-              200 characters.
-            </p>
+            <Message>
+              <p>
+                You&apos;ve surpassed the character limit. Please keep it under
+                200 characters.
+              </p>
+            </Message>
           </motion.div>
         ) : null}
       </AnimatePresence>
@@ -69,8 +72,7 @@ const FourthStep = ({
           </ActionButton>
         </div>
         <AnimatePresence>
-          {!getFieldState("Name").invalid &&
-          !getFieldState("ContactValue").invalid ? (
+          {!getFieldState("WebsiteDetails").invalid ? (
             <motion.div
               initial={fadeGrowInitial}
               animate={fadeGrowAnimate}
