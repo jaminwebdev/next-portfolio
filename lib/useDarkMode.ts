@@ -1,11 +1,20 @@
 import { useEffect, useState } from "react";
 
 function useDarkMode() {
-  const [theme, setTheme] = useState(
-    typeof window !== "undefined" && localStorage.theme
-      ? localStorage.theme
-      : "light"
-  );
+  const initialTheme = () => {
+    if (typeof window !== "undefined" && localStorage.theme) {
+      return localStorage.theme;
+    }
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      return "dark";
+    }
+    return "light";
+  };
+
+  const [theme, setTheme] = useState(initialTheme);
 
   useEffect(() => {
     const root = window.document.documentElement;
