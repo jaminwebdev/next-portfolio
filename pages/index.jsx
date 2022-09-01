@@ -5,6 +5,7 @@ import AppLink from "../components/AppLink";
 import AppIcon from "../components/AppIcon";
 import ConnectForm from "../components/forms/connect/ConnectForm";
 import Image from "next/image";
+import SVGSeparator from "../components/SVGSeparator";
 
 export default function Home() {
   const consoleTheLog = () => {
@@ -19,7 +20,8 @@ export default function Home() {
       <div className="flex space-x-5 w-full justify-center">
         <p>Blah blah blah and a blah blah</p>
       </div>
-      <div className="py-20 bg-body-color-light-secondary dark:bg-body-color-dark-secondary">
+      <div className="py-20 bg-body-color-light-secondary dark:bg-body-color-dark-secondary relative">
+        <SVGSeparator type="waves" classNames="top" />
         <h1>Primary Heading</h1>
         <h2>Secondary Heading</h2>
         <h3>Tertiary Heading</h3>
@@ -67,6 +69,7 @@ export default function Home() {
             Outlined
           </LinkButton>
         </div>
+        <SVGSeparator type="waves" classNames="bottom" />
       </div>
       <div className="p-20 max-w-4xl mx-auto bg-body-color-light-secondary dark:bg-body-color-dark-secondary">
         <ConnectForm />

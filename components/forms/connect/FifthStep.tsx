@@ -26,7 +26,6 @@ const FifthStep = ({
 
   useEffect(() => {
     if (contactMethod.current !== getValues("ContactMethod")) {
-      console.log("different");
       contactMethod.current = getValues("ContactMethod");
       triggerValidation();
     }
