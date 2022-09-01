@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AppIcon from "../../AppIcon";
+import ColorModeToggle from "../../ColorModeToggle";
 import DropDownLink from "./DropDownLink";
 
 interface DesktopNavigationProps {
@@ -8,7 +9,8 @@ interface DesktopNavigationProps {
 
 const DesktopNavigation = ({ styles }: DesktopNavigationProps) => {
   return (
-    <div className={`col-span-2 grid-flow-col gap-10 justify-end ${styles}`}>
+    <div
+      className={`col-span-2 grid-flow-col gap-10 justify-end items-center ${styles}`}>
       <div className="relative">
         <Link href="/" scroll={false}>
           <a className="text-lg p-4 font-medium text-primary-medium hover:text-secondary dark:text-body-text-light">
@@ -43,6 +45,7 @@ const DesktopNavigation = ({ styles }: DesktopNavigationProps) => {
           icon="linkedin"
           classNames="w-6 fill-primary-dark dark:fill-secondary hover:scale-110 hover:fill-secondary transition-all duration-100"></AppIcon>
       </a>
+      <ColorModeToggle />
     </div>
   );
 };
