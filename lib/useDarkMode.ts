@@ -4,18 +4,19 @@ function useDarkMode() {
   const [theme, setTheme] = useState(
     typeof window !== "undefined" ? localStorage.theme : "light"
   );
-  const colorTheme = theme === "dark" ? "light" : "dark";
 
   useEffect(() => {
     const root = window.document.documentElement;
 
-    root.classList.remove(colorTheme);
+    const opposingTheme = theme === "dark" ? "light" : "dark";
+
+    root.classList.remove(opposingTheme);
     root.classList.add(theme);
 
     if (typeof window !== "undefined") {
       localStorage.setItem("theme", theme);
     }
-  }, [theme, colorTheme]);
+  }, [theme]);
 
   return [theme, setTheme] as const;
 }

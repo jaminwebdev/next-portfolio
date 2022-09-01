@@ -6,14 +6,9 @@ const ColorModeToggle = () => {
 
   const changeColorMode = () => {
     setTheme((oldColorTheme) => {
-      console.log(oldColorTheme === "light" ? "dark" : "light");
       return oldColorTheme === "light" ? "dark" : "light";
     });
   };
-
-  useEffect(() => {
-    console.log(theme);
-  }, [theme]);
 
   return (
     <div
