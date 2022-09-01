@@ -32,7 +32,7 @@ const AppLink = ({ origin = "internal", link, children }: AppLinkProps) => {
         </span>
       ) : (
         <span className="hover:scale-105 inline-block">
-          <Link href={link}>
+          <Link href={link} scroll={false}>
             <a>
               <span
                 className={`

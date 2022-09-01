@@ -7,7 +7,7 @@ interface AppLogoProps {
 const AppLogo = ({ classNames }: AppLogoProps) => {
   return (
     <div>
-      <Link href="/">
+      <Link href="/" scroll={false}>
         <a>
           <svg
             className={classNames}

@@ -55,7 +55,7 @@ const LinkButton = ({
           {children}
         </a>
       ) : (
-        <Link href={link}>
+        <Link href={link} scroll={false}>
           <a>
             <span
               className={`rounded-md 

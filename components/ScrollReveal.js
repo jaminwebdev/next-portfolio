@@ -1,4 +1,4 @@
-import { motion, useAnimation, AnimatePresence, animate } from "framer-motion";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import useWindowDimensions from "../lib/useWindowDimensions";
 

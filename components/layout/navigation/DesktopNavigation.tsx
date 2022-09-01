@@ -10,14 +10,14 @@ const DesktopNavigation = ({ styles }: DesktopNavigationProps) => {
   return (
     <div className={`col-span-2 grid-flow-col gap-10 justify-end ${styles}`}>
       <div className="relative">
-        <Link href="/">
+        <Link href="/" scroll={false}>
           <a className="text-lg p-4 font-medium text-primary-medium hover:text-secondary dark:text-body-text-light">
             Portfolio
           </a>
         </Link>
       </div>
       <div className="relative">
-        <Link href="/">
+        <Link href="/" scroll={false}>
           <a className="peer text-lg p-4 font-medium text-primary-medium hover:text-secondary dark:text-body-text-light">
             Resources
           </a>

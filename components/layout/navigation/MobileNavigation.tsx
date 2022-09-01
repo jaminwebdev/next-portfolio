@@ -26,7 +26,7 @@ const MobileNavigation = ({ closeMobileNav }: MobileNavigationProps) => {
         <AppIcon icon="close" classNames="fill-white w-8" />
       </div>
       <div className="grid gap-6">
-        <Link href="/posts/another">
+        <Link href="/posts/another" scroll={false}>
           <a
             onClick={closeMobileNav}
             className="text-white text-2xl grid gap-3 grid-cols-[min-content,1fr] items-center">
@@ -34,7 +34,7 @@ const MobileNavigation = ({ closeMobileNav }: MobileNavigationProps) => {
             Blog
           </a>
         </Link>
-        <Link href="/">
+        <Link href="/" scroll={false}>
           <a
             onClick={closeMobileNav}
             className="text-white text-2xl grid gap-3 grid-cols-[min-content,1fr] items-center">
@@ -42,7 +42,7 @@ const MobileNavigation = ({ closeMobileNav }: MobileNavigationProps) => {
             Resources
           </a>
         </Link>
-        <Link href="/">
+        <Link href="/" scroll={false}>
           <a
             onClick={closeMobileNav}
             className="text-white text-2xl grid gap-3 grid-cols-[min-content,1fr] items-center">
