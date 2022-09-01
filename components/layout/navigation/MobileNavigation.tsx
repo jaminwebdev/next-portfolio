@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AppIcon from "../../AppIcon";
 
 interface MobileNavigationProps {
@@ -24,10 +25,31 @@ const MobileNavigation = ({ closeMobileNav }: MobileNavigationProps) => {
         className="absolute right-8 top-6 cursor-pointer">
         <AppIcon icon="close" classNames="fill-white w-8" />
       </div>
-      <div>
-        <p className="text-white">Blog</p>
-        <p className="text-white">Resources</p>
-        <p className="text-white">Contact</p>
+      <div className="grid gap-6">
+        <Link href="/posts/another">
+          <a
+            onClick={closeMobileNav}
+            className="text-white text-2xl grid gap-3 grid-cols-[min-content,1fr] items-center">
+            <AppIcon icon="book" classNames="fill-white w-5" />
+            Blog
+          </a>
+        </Link>
+        <Link href="/">
+          <a
+            onClick={closeMobileNav}
+            className="text-white text-2xl grid gap-3 grid-cols-[min-content,1fr] items-center">
+            <AppIcon icon="clipboard" classNames="fill-white w-5" />
+            Resources
+          </a>
+        </Link>
+        <Link href="/">
+          <a
+            onClick={closeMobileNav}
+            className="text-white text-2xl grid gap-3 grid-cols-[min-content,1fr] items-center">
+            <AppIcon icon="chat" classNames="stroke-white w-5" />
+            Contact
+          </a>
+        </Link>
       </div>
     </div>
   );

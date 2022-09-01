@@ -214,6 +214,27 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
+    chat: () => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className={classNames}
+        viewBox="0 0 59 54"
+        fill="transparent">
+        <path
+          d="M34.7858 46.0478C45.403 46.0478 50.713 46.0478 54.01 42.748C57.3097 39.4511 57.3097 34.1411 57.3097 23.5239C57.3097 12.9067 57.3097 7.59669 54.01 4.29975C50.713 1 45.403 1 34.7858 1H23.5239C12.9067 1 7.59669 1 4.29975 4.29975C1 7.59669 1 12.9067 1 23.5239C1 34.1411 1 39.4511 4.29975 42.748C6.13826 44.5894 8.60181 45.403 12.2619 45.7606"
+          className="stroke-inherit"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M29.1547 23.5244V23.5526M17.8928 23.5244V23.5526M40.4167 23.5244V23.5526M34.7857 46.0483C31.3057 46.0483 27.471 47.4561 23.9714 49.272C18.3461 52.1917 15.5334 53.6529 14.1482 52.721C12.7629 51.7919 13.0248 48.906 13.5513 43.1371L13.6695 41.8251"
+          className="stroke-inherit"
+          strokeWidth="4"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
   };
 
   return <>{icons[icon]()}</>;
