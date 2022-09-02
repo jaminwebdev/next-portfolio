@@ -17,16 +17,12 @@ function useDarkMode() {
   const [theme, setTheme] = useState(initialTheme);
 
   useEffect(() => {
-    const root = window.document.documentElement;
-
-    const opposingTheme = theme === "dark" ? "light" : "dark";
-
-    root.classList.remove(opposingTheme);
-    root.classList.add(theme);
-
-    if (typeof window !== "undefined") {
-      localStorage.setItem("theme", theme);
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return [theme, setTheme] as const;
