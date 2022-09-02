@@ -3,19 +3,12 @@ import useDarkMode from "../lib/useDarkMode";
 
 const ColorModeToggle = () => {
   const [theme, setTheme] = useDarkMode();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
 
   const changeColorMode = () => {
     setTheme((oldColorTheme) => {
       return oldColorTheme === "light" ? "dark" : "light";
     });
   };
-
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <div
