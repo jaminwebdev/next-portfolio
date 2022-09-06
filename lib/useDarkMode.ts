@@ -1,19 +1,14 @@
 import { useEffect, useState } from "react";
 
 function useDarkMode() {
-  const [theme, setTheme] = useState("light");
-  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState<string | undefined>();
 
   useEffect(() => {
-    setMounted(true);
-    if (typeof window !== "undefined" && localStorage.theme) {
+    if (localStorage.theme) {
       setTheme(localStorage.theme);
       return;
     }
-    if (
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
       return;
     }
@@ -21,15 +16,16 @@ function useDarkMode() {
   }, []);
 
   useEffect(() => {
-    if (mounted) {
-      if (theme === "dark") {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+    if (theme) {
       localStorage.setItem("theme", theme);
     }
-  }, [theme, mounted]);
+  }, [theme]);
 
   return [theme, setTheme] as const;
 }
