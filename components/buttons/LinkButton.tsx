@@ -76,7 +76,8 @@ const LinkButton = ({
               items-center
               cursor-pointer
               group
-              ${variantClasses[variant][color]}`}>
+              ${variantClasses[variant][color]}
+              ${classNames}`}>
               {children}
             </span>
           </a>
