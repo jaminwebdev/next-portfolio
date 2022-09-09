@@ -45,7 +45,6 @@ const ScrollReveal = ({
     <div ref={ref}>
       <AnimatePresence>
         <motion.div
-          className="relative"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={animationControl}>
           {children}
