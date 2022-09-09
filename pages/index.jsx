@@ -7,6 +7,7 @@ import AppIcon from "../components/AppIcon";
 import ConnectForm from "../components/forms/connect/ConnectForm";
 import SVGSeparator from "../components/SVGSeparator";
 import ScrollReveal from "../components/ScrollReveal";
+import PortfolioSection from "../components/sections/home/PortfolioSection";
 
 const Home = () => {
   const [headerFormVisible, setHeaderFormVisible] = useState(false);
@@ -18,8 +19,10 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <section className="bg-body-color-light-secondary dark:bg-body-color-dark-secondary pt-44 pb-14 relative">
+    <main>
+      <header
+        id="homepageHero"
+        className="bg-body-color-light-secondary dark:bg-body-color-dark-secondary pt-44 pb-14 relative">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[350px]">
             <div className="grid content-center">
@@ -39,7 +42,7 @@ const Home = () => {
                   </h4>
                   <ActionButton
                     color="primary"
-                    classNames="justify-self-start py-3 px-10 text-lg"
+                    classNames="justify-self-start py-4 px-11 text-lg dark:bg-secondary"
                     callback={toggleHeaderForm}>
                     Let&apos;s Work Together
                     <AppIcon icon="chat" classNames="w-5 ml-2 stroke-white" />
@@ -72,8 +75,9 @@ const Home = () => {
           classNames="bottom tiltDownLeft"
           customHeight="100px"
         />
-      </section>
-    </div>
+      </header>
+      <PortfolioSection />
+    </main>
   );
 };
 
