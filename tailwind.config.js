@@ -41,6 +41,10 @@ module.exports = {
         ".origin-left-center": {
           "transform-origin": "left center",
         },
+        ".custom-rotate-avatar-mobile": {
+          transform: "rotateZ(-20deg) rotateY(180deg) scale(0.7)",
+          filter: "drop-shadow(20px 30px 20px rgba(0, 0, 0,.1))",
+        },
       });
     }),
   ],

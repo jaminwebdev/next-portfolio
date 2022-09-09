@@ -58,10 +58,11 @@ function MyApp({ Component, pageProps, router }) {
         id="appLayout"
         className={`
         relative
+        overflow-x-hidden
         z-10
         bg-body-color-light
         dark:bg-body-color-dark
-        min-h-[150vh]
+        min-h-[100vh]
         transition-all
         ease-out
         duration-500
