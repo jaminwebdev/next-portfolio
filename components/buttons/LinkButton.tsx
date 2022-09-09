@@ -6,6 +6,7 @@ interface LinkButtonProps {
   origin: string;
   link: string;
   children: React.ReactNode;
+  classNames: string;
 }
 
 const LinkButton = ({
@@ -14,6 +15,7 @@ const LinkButton = ({
   origin = "internal",
   link,
   children,
+  classNames = "",
 }: LinkButtonProps) => {
   const variantClasses = {
     primary: {
@@ -51,7 +53,8 @@ const LinkButton = ({
             justify-center
             items-center
             group
-            ${variantClasses[variant][color]}`}>
+            ${variantClasses[variant][color]}
+            ${classNames}`}>
           {children}
         </a>
       ) : (

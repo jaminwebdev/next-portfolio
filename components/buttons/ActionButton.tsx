@@ -4,6 +4,7 @@ interface ActionButtonProps {
   type: "submit" | "button" | "reset";
   callback: any;
   children: React.ReactNode;
+  classNames: string;
 }
 
 const ActionButton = ({
@@ -12,6 +13,7 @@ const ActionButton = ({
   type,
   callback,
   children,
+  classNames,
 }: ActionButtonProps) => {
   const variantClasses = {
     primary: {
@@ -37,6 +39,7 @@ const ActionButton = ({
       onClick={callback}
       className={`rounded-md 
           px-6 py-2 
+          z-30
           hover:scale-105 
           transition-transform 
           duration-100 
@@ -47,7 +50,8 @@ const ActionButton = ({
           justify-center
           items-center
           group
-          ${variantClasses[variant][color]} `}>
+          ${variantClasses[variant][color]} 
+          ${classNames}`}>
       {children}
     </button>
   );

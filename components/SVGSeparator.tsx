@@ -9,7 +9,7 @@ interface SVGSeparatorPropTypes {
 const SVGSeparator = ({
   type,
   classNames,
-  customHeight = "80px",
+  customHeight,
   fillClass = "fill-body-color-light dark:fill-body-color-dark",
 }: SVGSeparatorPropTypes) => {
   if (type === "tilt") {
