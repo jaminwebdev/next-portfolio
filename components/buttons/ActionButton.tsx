@@ -4,7 +4,7 @@ interface ActionButtonProps {
   type: "submit" | "button" | "reset";
   callback: any;
   children: React.ReactNode;
-  classNames: string;
+  classNames?: string;
 }
 
 const ActionButton = ({

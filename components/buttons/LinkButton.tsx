@@ -6,7 +6,7 @@ interface LinkButtonProps {
   origin: string;
   link: string;
   children: React.ReactNode;
-  classNames: string;
+  classNames?: string;
 }
 
 const LinkButton = ({
