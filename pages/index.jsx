@@ -24,7 +24,9 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[350px]">
             <div className="grid content-center">
               {headerFormVisible ? (
-                <ConnectForm />
+                <div className="pb-10">
+                  <ConnectForm />
+                </div>
               ) : (
                 <div className="pr-5 grid content-center gap-8">
                   <h1 className="leading-tight">
