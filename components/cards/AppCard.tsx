@@ -60,7 +60,7 @@ const AppCard = ({
         <h3 className="font-bold text-3xl">{heading}</h3>
         <p>{body}</p>
         {btns ? (
-          <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-between gap-2">
+          <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center md:justify-between lg:justify-between gap-6 md:gap-4 lg:gap-4">
             {btns()}
           </div>
         ) : null}
