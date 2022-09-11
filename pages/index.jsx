@@ -8,6 +8,7 @@ import ConnectForm from "../components/forms/connect/ConnectForm";
 import SVGSeparator from "../components/SVGSeparator";
 import ScrollReveal from "../components/ScrollReveal";
 import PortfolioSection from "../components/sections/home/PortfolioSection";
+import ServicesSection from "../components/sections/home/ServicesSection";
 
 const Home = () => {
   const [headerFormVisible, setHeaderFormVisible] = useState(false);
@@ -77,6 +78,7 @@ const Home = () => {
         />
       </header>
       <PortfolioSection />
+      <ServicesSection />
     </main>
   );
 };
