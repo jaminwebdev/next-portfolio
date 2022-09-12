@@ -23,7 +23,7 @@ const AppCard = ({
   bgImg,
 }: AppCardProps) => {
   return (
-    <div className="bg-body-color-light-secondary/50 dark:bg-body-color-dark-secondary rounded-xl shadow-lg lg:shadow-xl shadow-primary-dark/10 p-6">
+    <div className="bg-body-color-light-secondary/50 dark:bg-body-color-dark-secondary rounded-xl shadow-lg lg:shadow-xl shadow-primary-dark/10 p-6 pb-10">
       <div
         style={{
           background: `url(${bgImg})`,
@@ -60,7 +60,7 @@ const AppCard = ({
         <h3 className="font-bold text-3xl">{heading}</h3>
         <p>{body}</p>
         {btns ? (
-          <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center md:justify-between lg:justify-between gap-6 md:gap-4 lg:gap-4">
+          <div className="mt-2 grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center md:justify-between lg:justify-between gap-6 md:gap-4 lg:gap-4">
             {btns()}
           </div>
         ) : null}
