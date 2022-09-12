@@ -9,6 +9,7 @@ import SVGSeparator from "../components/SVGSeparator";
 import ScrollReveal from "../components/ScrollReveal";
 import PortfolioSection from "../components/sections/home/PortfolioSection";
 import ServicesSection from "../components/sections/home/ServicesSection";
+import FavoriteStackSection from "../components/sections/home/FavoriteStackSection";
 
 const Home = () => {
   const [headerFormVisible, setHeaderFormVisible] = useState(false);
@@ -79,6 +80,7 @@ const Home = () => {
       </header>
       <PortfolioSection />
       <ServicesSection />
+      <FavoriteStackSection />
     </main>
   );
 };

@@ -22,7 +22,9 @@ const ServicesSection = () => {
   const activeBtnTextClasses = `text-white dark:text-secondary`;
 
   return (
-    <div className="bg-body-color-light-secondary dark:bg-body-color-dark-secondary py-44 relative mb-4">
+    <section
+      id="services"
+      className="bg-body-color-light-secondary dark:bg-body-color-dark-secondary py-44 relative mb-4">
       <SVGSeparator
         type="tilt"
         customHeight="100px"
@@ -262,7 +264,7 @@ const ServicesSection = () => {
         classNames="bottom tiltDownRight"
         fillClass="fill-body-color-light dark:fill-body-color-dark"
       />
-    </div>
+    </section>
   );
 };
 
