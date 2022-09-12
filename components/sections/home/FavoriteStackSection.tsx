@@ -6,7 +6,7 @@ const FavoriteStackSection = () => {
   return (
     <section id="favoriteStack" className="py-28">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div id="deviceImages" className="grid justify-center">
             <div className="relative">
               <Image
