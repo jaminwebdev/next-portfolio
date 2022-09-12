@@ -24,7 +24,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="bg-body-color-light-secondary dark:bg-body-color-dark-secondary py-44 relative mb-4">
+      className="bg-body-color-light-secondary dark:bg-body-color-dark-secondary py-44 relative">
       <SVGSeparator
         type="tilt"
         customHeight="100px"
