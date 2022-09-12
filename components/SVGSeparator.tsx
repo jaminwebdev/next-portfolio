@@ -2,7 +2,7 @@ interface SVGSeparatorPropTypes {
   type: "tilt" | "waves";
   classNames: string;
   customHeight: string;
-  fillClass: string;
+  fillClass?: string;
 }
 
 // z index?
