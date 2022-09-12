@@ -4,7 +4,7 @@ import SVGSeparator from "../../SVGSeparator";
 
 const OtherStacksSection = () => {
   return (
-    <section className="bg-body-color-light-secondary dark:bg-body-color-dark-secondary relative py-40 mb-4">
+    <section className="bg-body-color-light-secondary dark:bg-body-color-dark-secondary relative py-40">
       <SVGSeparator type="waves" classNames="top" customHeight="75px" />
       <Container>
         <h2 className="text-center mb-10">

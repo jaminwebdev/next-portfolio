@@ -4,6 +4,7 @@ import PortfolioSection from "../components/sections/home/PortfolioSection";
 import ServicesSection from "../components/sections/home/ServicesSection";
 import FavoriteStackSection from "../components/sections/home/FavoriteStackSection";
 import OtherStacksSection from "../components/sections/home/OtherStacksSection";
+import OtherTechSection from "../components/sections/home/OtherTechSection";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <ServicesSection />
       <FavoriteStackSection />
       <OtherStacksSection />
+      <OtherTechSection />
     </main>
   );
 };
