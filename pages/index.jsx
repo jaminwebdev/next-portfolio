@@ -53,7 +53,7 @@ const Home = () => {
               )}
             </div>
             <div className="z-10 relative">
-              <ScrollReveal>
+              <ScrollReveal bounce>
                 <div className="hidden lg:block">
                   <Image
                     src="/images/leaning-laptop.png"
@@ -62,13 +62,18 @@ const Home = () => {
                     alt="laptop showcasing latest project"
                   />
                 </div>
-                <img
-                  className="absolute custom-rotate-avatar-mobile -top-[100px] right-[-135px] lg:top-1 lg:right-5 -z-20 lg:rotate-[30deg]"
-                  src="/avatars/smiling-waving.svg"
-                  alt="Avatar of me smiling & waiving"
-                  id="headerAvatar"
-                />
               </ScrollReveal>
+              <img
+                className="hidden lg:block -mt-6"
+                src="/images/leaning-laptop-shadow.png"
+                alt="shadow for floating laptop"
+              />
+              <img
+                className="absolute custom-rotate-avatar-mobile -top-[100px] right-[-135px] lg:-top-2 lg:right-5 -z-20 lg:rotate-[30deg]"
+                src="/avatars/smiling-waving.svg"
+                alt="Avatar of me smiling & waiving"
+                id="headerAvatar"
+              />
             </div>
           </div>
         </Container>
