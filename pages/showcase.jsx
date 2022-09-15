@@ -43,7 +43,7 @@ const Showcase = () => {
             callback={consoleTheLog}>
             Howdy
           </ActionButton>
-          <ActionButton variant="outlined" callback={consoleTheLog}>
+          <ActionButton variant="outline" callback={consoleTheLog}>
             Howdy
           </ActionButton>
         </div>
