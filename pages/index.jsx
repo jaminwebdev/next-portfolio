@@ -6,6 +6,7 @@ import FavoriteStackSection from "../components/sections/home/FavoriteStackSecti
 import OtherStacksSection from "../components/sections/home/OtherStacksSection";
 import OtherTechSection from "../components/sections/home/OtherTechSection";
 import LearnResourcesSection from "../components/sections/home/LearnResourcesSection";
+import CTASection from "../components/sections/CTASection";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <OtherStacksSection />
       <OtherTechSection />
       <LearnResourcesSection />
+      <CTASection />
     </main>
   );
 };

@@ -20,7 +20,7 @@ const ActionButton = ({
       primary: "bg-primary-medium text-white hover:bg-primary-dark",
       secondary: "bg-secondary text-white",
     },
-    outlined: {
+    outline: {
       primary:
         "border-primary-medium border-2 text-primary-medium hover:bg-primary-dark hover:text-white",
       secondary:
