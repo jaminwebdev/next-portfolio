@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface AppLogoProps {
-  classNames: string;
+  classNames?: string;
 }
 
 const AppLogo = ({ classNames }: AppLogoProps) => {

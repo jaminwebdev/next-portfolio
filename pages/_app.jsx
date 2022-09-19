@@ -8,6 +8,7 @@ import {
 } from "../lib/animations";
 import MobileNavigation from "../components/layout/navigation/MobileNavigation.tsx";
 import Navigation from "../components/layout/navigation/Navigation.tsx";
+import Footer from "../components/layout/Footer.tsx";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps, router }) {
@@ -90,6 +91,7 @@ function MyApp({ Component, pageProps, router }) {
             <Component {...pageProps} />
           </motion.div>
         </AnimatePresence>
+        <Footer />
       </div>
     </>
   );
