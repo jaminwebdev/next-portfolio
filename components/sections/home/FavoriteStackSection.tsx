@@ -35,7 +35,7 @@ const FavoriteStackSection = () => {
             </div>
           </div>
           <div id="stackIcons" className="py-4 pl-0 lg:pl-20 grid gap-4">
-            <h2 className="text-4xl">
+            <h2>
               My Favorite <span className="text-secondary">Stack</span>
             </h2>
             <p className="my-4">

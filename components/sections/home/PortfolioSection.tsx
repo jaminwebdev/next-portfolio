@@ -7,7 +7,7 @@ const PortfolioSection = () => {
   return (
     <section id="portfolioSection" className="py-24">
       <Container>
-        <h2 className="text-center text-5xl mb-12">
+        <h2 className="text-center mb-12">
           My <span className="text-secondary">Portfolio</span>
         </h2>
         <div className="grid grid-cols-1 gap-8">
