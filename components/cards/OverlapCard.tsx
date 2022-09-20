@@ -8,7 +8,7 @@ interface OverlapCardProps {
   tagLink?: string;
   heading: string;
   body: string;
-  btns?: () => JSX.Element | React.ReactNode;
+  btns?: JSX.Element | React.ReactNode;
   bgImg: string;
 }
 
@@ -62,7 +62,7 @@ const OverlapCard = ({
           <h3 className="font-bold text-3xl">{heading}</h3>
           <p>{body}</p>
           <div className="grid grid-cols-[max-content,max-content] justify-items-start gap-4">
-            {btns()}
+            {btns}
           </div>
         </div>
       </div>
