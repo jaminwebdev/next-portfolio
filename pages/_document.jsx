@@ -7,6 +7,7 @@ export default function Document() {
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"></link>
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <body>
         <Main />

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Head from "next/head";
 import HomepageHeader from "../components/sections/home/HomepageHeader";
 import PortfolioSection from "../components/sections/home/PortfolioSection";
 import ServicesSection from "../components/sections/home/ServicesSection";
@@ -10,16 +11,25 @@ import CTASection from "../components/sections/CTASection";
 
 const Home = () => {
   return (
-    <main>
-      <HomepageHeader />
-      <PortfolioSection />
-      <ServicesSection />
-      <FavoriteStackSection />
-      <OtherStacksSection />
-      <OtherTechSection />
-      <LearnResourcesSection />
-      <CTASection />
-    </main>
+    <>
+      <Head>
+        <title>He Builds Websites | Modern and Fast Websites</title>
+        <meta
+          name="description"
+          content="Building the fastest websites with the fastest technologies."></meta>
+        <link rel="canonical" href="https://hebuildswebsites.com" />
+      </Head>
+      <main>
+        <HomepageHeader />
+        <PortfolioSection />
+        <ServicesSection />
+        <FavoriteStackSection />
+        <OtherStacksSection />
+        <OtherTechSection />
+        <LearnResourcesSection />
+        <CTASection />
+      </main>
+    </>
   );
 };
 
