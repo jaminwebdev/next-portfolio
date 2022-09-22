@@ -19,7 +19,7 @@ const DesktopNavigation = ({ styles }: DesktopNavigationProps) => {
         </Link>
       </div>
       <div className="relative">
-        <Link href="/" scroll={false}>
+        <Link href="/resources" scroll={false}>
           <a className="peer text-lg p-4 font-medium text-primary-medium hover:text-secondary dark:text-body-text-light">
             Resources
           </a>

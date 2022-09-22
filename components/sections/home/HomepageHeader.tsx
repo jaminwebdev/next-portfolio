@@ -35,7 +35,7 @@ const HomepageHeader = () => {
                   <span className="text-secondary"> Front End</span> Engineer.
                 </h1>
                 <h4 className="font-normal leading-relaxed">
-                  I build blazingly fast websites and apps with tools like
+                  I build incredibly fast websites and apps with tools like
                   Astro, Vue & Nuxt JS, React & Next JS, Angular, and Node.
                 </h4>
                 <ActionButton
