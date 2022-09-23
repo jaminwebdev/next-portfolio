@@ -26,7 +26,7 @@ const MobileNavigation = ({ closeMobileNav }: MobileNavigationProps) => {
         <AppIcon icon="close" classNames="fill-white w-8" />
       </div>
       <div className="grid gap-6">
-        <Link href="/posts/another" scroll={false}>
+        <Link href="/blog" scroll={false}>
           <a
             onClick={closeMobileNav}
             className="text-white text-2xl grid gap-3 grid-cols-[min-content,1fr] items-center">
@@ -34,12 +34,36 @@ const MobileNavigation = ({ closeMobileNav }: MobileNavigationProps) => {
             Blog
           </a>
         </Link>
-        <Link href="/" scroll={false}>
+        <Link href="/resources" scroll={false}>
           <a
             onClick={closeMobileNav}
             className="text-white text-2xl grid gap-3 grid-cols-[min-content,1fr] items-center">
             <AppIcon icon="clipboard" classNames="fill-white w-5" />
             Resources
+          </a>
+        </Link>
+        <Link href="/resources/learn-javascript" scroll={false}>
+          <a
+            onClick={closeMobileNav}
+            className="text-white text-2xl grid gap-3 grid-cols-[min-content,1fr] items-center">
+            <AppIcon icon="javascript" classNames="fill-white w-5" />
+            Learn JS
+          </a>
+        </Link>
+        <Link href="/resources/learn-react" scroll={false}>
+          <a
+            onClick={closeMobileNav}
+            className="text-white text-2xl grid gap-3 grid-cols-[min-content,1fr] items-center">
+            <AppIcon icon="react" classNames="fill-white w-5" />
+            Learn React
+          </a>
+        </Link>
+        <Link href="/resources/learn-vue" scroll={false}>
+          <a
+            onClick={closeMobileNav}
+            className="text-white text-2xl grid gap-3 grid-cols-[min-content,1fr] items-center">
+            <AppIcon icon="vue" classNames="fill-white w-5" />
+            Learn Vue
           </a>
         </Link>
         <Link href="/" scroll={false}>
