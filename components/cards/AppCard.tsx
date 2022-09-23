@@ -56,11 +56,11 @@ const AppCard = ({
           </div>
         ) : null}
       </div>
-      <div className="grid gap-2">
+      <div className="grid gap-3">
         <h3 className="font-bold text-3xl">{heading}</h3>
         <p>{body}</p>
         {btns ? (
-          <div className="mt-2 content-end grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center md:justify-between lg:justify-between gap-6 md:gap-4 lg:gap-4">
+          <div className="mt-2 content-end grid grid-cols-[repeat(auto-fit,_minmax(130px,_max-content))] justify-between gap-4 md:gap-4 lg:gap-4">
             {btns}
           </div>
         ) : null}
