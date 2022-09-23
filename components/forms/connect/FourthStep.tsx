@@ -38,7 +38,7 @@ const FourthStep = ({
         {...register("WebsiteDetails", { maxLength: 200 })}
         placeholder="Website needs and wants"
         rows={6}
-        className="py-2 px-3 w-full rounded-md resize-none placeholder-gray-400 outline-none border-2 border-transparent focus:border-secondary/60"
+        className="py-2 px-3 w-full dark:text-body-text-dark rounded-md resize-none placeholder-gray-400 outline-none border-2 border-transparent focus:border-secondary/60"
       />
       <p className="mt-2">
         Please keep it brief - max characters 200. Characters left:
