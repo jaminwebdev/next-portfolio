@@ -287,6 +287,28 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
+    video: () => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className={classNames}
+        viewBox="0 0 60 48"
+        fill="none">
+        <path
+          d="M47 1H12.5C6.14873 1 1 6.14873 1 12.5V35.5C1 41.8513 6.14873 47 12.5 47H47C53.3513 47 58.5 41.8513 58.5 35.5V12.5C58.5 6.14873 53.3513 1 47 1Z"
+          className="stroke-inherit"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M38.375 24L24 15.375V32.625L38.375 24Z"
+          className="stroke-inherit"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
   };
 
   return <>{icons[icon]()}</>;
