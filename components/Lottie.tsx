@@ -21,8 +21,9 @@ export const Lottie = ({
   const lottieInstance = useRef<any>();
 
   useEffect(() => {
+    let lottieTimeout;
     if (element.current) {
-      setTimeout(() => {
+      lottieTimeout = setTimeout(() => {
         lottieInstance.current = lottie.loadAnimation({
           animationData,
           container: element.current,
@@ -32,7 +33,7 @@ export const Lottie = ({
     }
     return () => {
       lottieInstance.current?.destroy();
-      lottie.destroy();
+      if (lottieTimeout) clearTimeout(lottieTimeout);
     };
   }, [animationData, delay, loop]);
 
