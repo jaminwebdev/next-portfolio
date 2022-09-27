@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import AppIcon from "../AppIcon";
 
 interface AppCardProps {
@@ -23,15 +24,10 @@ const AppCard = ({
   bgImg,
 }: AppCardProps) => {
   return (
-    <div className="grid grid-rows-[260px,1fr] gap-4 bg-body-color-light-secondary/50 dark:bg-body-color-dark-secondary rounded-xl shadow-lg lg:shadow-xl shadow-primary-dark/10 p-6 pb-10">
-      <div
-        style={{
-          background: `url(${bgImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-        }}
-        className="rounded-lg min-h-[260px] w-full relative">
-        <div className="flex gap-3 absolute left-2 -bottom-3">
+    <div className="grid grid-rows-[220px,1fr] gap-6 bg-body-color-light-secondary/50 dark:bg-body-color-dark-secondary rounded-2xl shadow-lg lg:shadow-xl shadow-primary-dark/10 p-6 pb-8">
+      <div className="rounded-xl min-h-[220px] w-full relative overflow-hidden">
+        <Image src={bgImg} layout="fill" alt="" />
+        <div className="flex gap-2 absolute left-2 bottom-1">
           {icons?.map((icon, index) => (
             <a
               href={iconLinks?.[index]}
@@ -57,7 +53,7 @@ const AppCard = ({
         ) : null}
       </div>
       <div className="grid gap-3">
-        <h3 className="font-bold text-3xl">{heading}</h3>
+        <h3 className="font-bold text-2xl">{heading}</h3>
         <p>{body}</p>
         {btns ? (
           <div className="mt-2 content-end grid grid-cols-[repeat(auto-fit,_minmax(130px,_max-content))] justify-between gap-4 md:gap-4 lg:gap-4">
