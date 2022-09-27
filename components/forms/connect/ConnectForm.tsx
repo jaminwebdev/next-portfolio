@@ -16,7 +16,6 @@ import FifthStep from "./FifthStep";
 import FormSubmitting from "../FormSubmitting";
 import FormSuccess from "../FormSuccess";
 import FormError from "../FormError";
-import axios from "axios";
 
 const ConnectForm = () => {
   const {
