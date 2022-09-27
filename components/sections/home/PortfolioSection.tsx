@@ -19,7 +19,7 @@ const PortfolioSection = () => {
               <AppCard {...featuredPortfolio} />
             </div>
           </div>
-          <div className="grid lg:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {portfolioItems.map((portfolio) => (
               <AppCard {...portfolio} key={portfolio.heading} />
             ))}
