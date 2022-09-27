@@ -18,9 +18,7 @@ const Resources = () => {
           content="Check out my favorite resources for learning how to be a better programmer."></meta>
       </Head>
       <main>
-        <header
-          id="homepageHero"
-          className="bg-body-color-light-secondary dark:bg-body-color-dark-secondary pt-44 pb-14 relative">
+        <header className="bg-body-color-light-secondary dark:bg-body-color-dark-secondary pt-44 pb-14 relative">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[350px]">
               <div className="grid content-center">
@@ -66,16 +64,18 @@ const Resources = () => {
             customHeight="100px"
           />
         </header>
-        <section id="portfolioSection" className="pt-24 pb-12">
+        <section className="pt-24 pb-12">
           <Container>
             <div className="grid grid-cols-1 gap-8">
-              <div className="grid lg:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <AppCard
                   heading="Learn JavaScript"
                   body="Before you hop into a framework, you should be well versed in JS."
                   bgImg="/images/learn-js.jpg"
                   btns={
-                    <LinkButton origin="internal" link="/resources/learn-js">
+                    <LinkButton
+                      origin="internal"
+                      link="/resources/learn-javascript">
                       View
                       <AppIcon icon="eyes" classNames="w-4 fill-white" />
                     </LinkButton>
