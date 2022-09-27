@@ -6,7 +6,7 @@ import Link from "next/link";
 const Footer = () => (
   <footer className="mt-20 pb-6">
     <Container>
-      <div className="grid gap-16 lg:gap-5 grid-cols-1 lg:grid-cols-4 items-start">
+      <div className="grid gap-16 lg:gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start">
         <div className="p-8 bg-body-color-light-secondary dark:bg-body-color-dark-secondary">
           <AppLogo />
           <p className="mt-5">
