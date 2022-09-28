@@ -14,7 +14,9 @@ const LearnJS = () => {
   return (
     <>
       <Head>
-        <title>Learn JS | HeBuildsWebsites </title>
+        <title>
+          Learn JavaScript: Free Tutorials and Videos | HeBuildsWebsites
+        </title>
         <meta
           name="description"
           content="These free resources are the best places to start learning JavaScript"></meta>
@@ -137,7 +139,7 @@ const LearnJS = () => {
             </div>
           </Container>
         </section>
-        <section id="closureScope" className="pt-24 pb-12">
+        <section id="closureScope" className="pt-32 pb-12">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -247,6 +249,191 @@ outerFnVariable = 6 // error - undefined
                   <LinkButton
                     origin="external"
                     link="https://www.youtube.com/watch?v=sZjlEKbaykc">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+            </div>
+          </Container>
+        </section>
+        <section id="firstClassFunctions" className="pt-32 pb-12">
+          <Container>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2>
+                  First Class <br></br> & Higher Order<br></br>
+                  <span className="text-secondary">Functions</span>
+                </h2>
+                <p className="my-5">
+                  Adding to JS’s flexibility, functions are treated like any
+                  other variable - meaning you can pass them around to other
+                  functions, or return from another function.
+                </p>
+              </div>
+              <div className="row-start-1 lg:row-start-auto">
+                <SyntaxHighlighter language="javascript" style={dracula}>
+                  {`// first class functions
+function sayHello() {
+  return "Hello, ";
+}
+function greeting(helloMessage, name) {
+  console.log(helloMessage() + name);
+}
+// Pass 'sayHello' as an argument to 'greeting' function
+greeting(sayHello, "JavaScript!"); // Hello, JavaScript!
+`}
+                </SyntaxHighlighter>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+              <AppCard
+                heading="MDN"
+                body="Mozilla Developer Network's documentation is excellent for any topic in JS."
+                bgImg="/images/learn-js/learn-md.jpg"
+                btns={
+                  <>
+                    <LinkButton
+                      origin="external"
+                      link="https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function">
+                      Read
+                      <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                    </LinkButton>
+                  </>
+                }></AppCard>
+              <AppCard
+                heading="javatpoint.com"
+                body="javatpoint has a lot of good info for the JavaScript newbie."
+                bgImg="/images/learn-js/learn-javatpoint.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.javatpoint.com/js-first-class-function">
+                    Read
+                    <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="DevTuts"
+                body="DevTuts covers a great deal of vanilla JS topics - great for newcomers and interview preppers!"
+                bgImg="/images/learn-js/learn-devtuts.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=4UeWzn4jzwM">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="procademy"
+                body="procademy does a great job of explaining how functions are stored & referenced in memory."
+                bgImg="/images/learn-js/learn-procademy.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=RIlfITk-xKw">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="All Things JS"
+                body="All Things JS uses callbacks to showcase a higher order functions - the distinction is small, but important."
+                bgImg="/images/learn-js/learn-allThings.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=O9lMynNdka4">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+            </div>
+          </Container>
+        </section>
+        <section id="arrayMethods" className="pt-32 pb-12">
+          <Container>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2>
+                  Array <br></br>
+                  <span className="text-secondary">Methods</span>
+                </h2>
+                <p className="my-5">
+                  Array&apos;s are incredibly useful, as are all the methods
+                  available to the data-type. Mastering these in addition to the
+                  previous sections is essential to creating powerful apps.
+                </p>
+              </div>
+              <div className="row-start-1 lg:row-start-auto">
+                <SyntaxHighlighter language="javascript" style={dracula}>
+                  {`// array methods
+[🐮, 🥔, 🐔, 🌽].map(cook) // [🍔, 🍟, 🍗, 🍿]
+[🍔, 🍟, 🍗, 🍿].filter(isVegetarian) // [🍟, 🍿]
+[🍔, 🍟, 🍗, 🍿].reduce(eat) // 💩
+`}
+                </SyntaxHighlighter>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+              <AppCard
+                heading="Web Dev Simplified"
+                body="Kyle does a great job at quickly summing up the most useful array methods."
+                bgImg="/images/learn-js/learn-webdev-arrays.jpg"
+                btns={
+                  <>
+                    <LinkButton
+                      origin="external"
+                      link="https://www.youtube.com/watch?v=R8rmfD9Y5-c">
+                      Watch
+                      <AppIcon icon="video" classNames="w-4 stroke-white" />
+                    </LinkButton>
+                  </>
+                }></AppCard>
+              <AppCard
+                heading="javascript.info"
+                body="javascript.info's breakdown of array methods is masterful. Tons of great examples."
+                bgImg="/images/learn-js/learn-javascriptinfo.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://javascript.info/array-methods">
+                    Read
+                    <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Freecodecamp"
+                body="freeCodeCamp's articles and breakdowns are always great starting points."
+                bgImg="/images/learn-js/learn-freecodecamp-arrays.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.freecodecamp.org/news/the-javascript-array-handbook/">
+                    Read
+                    <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Akshay Saini"
+                body="Akshay does a great job of explaining reduce in this lengthy video about array methods."
+                bgImg="/images/learn-js/learn-akshay.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=zdp0zrpKzIE">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Traversy Media"
+                body="If you've spent any time searching anything JS on YouTube, Traversy Media has likely come up."
+                bgImg="/images/learn-js/learn-traversy-arrays.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=rRgD1yVwIvE">
                     Watch
                     <AppIcon icon="video" classNames="w-4 stroke-white" />
                   </LinkButton>
