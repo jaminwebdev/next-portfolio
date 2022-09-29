@@ -844,6 +844,75 @@ console.log("Third");
             </div>
           </Container>
         </section>
+        <section id="dates" className="pt-32 pb-12">
+          <Container>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2>
+                  Dates & <br></br>
+                  <span className="text-secondary">Web APIs</span>
+                </h2>
+                <p className="my-5">
+                  Another slippery aspect of JavaScript - the Date data type.
+                  There are a number of libraries out there to make things
+                  easier, but it always helps to understand the underlying
+                  functionality.
+                </p>
+              </div>
+              <div className="row-start-1 lg:row-start-auto">
+                <SyntaxHighlighter language="javascript" style={dracula}>
+                  {`// dates in js
+new Date('2022-07-22')
+new Date('2022-07') //July 1st 2022, 00:00:00
+new Date('2022') //Jan 1st 2022, 00:00:00
+new Date('07/22/2022')
+// ...
+`}
+                </SyntaxHighlighter>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+              <AppCard
+                heading="CSS Tricks"
+                body="Creating, formatting, and comparing dates - you'll surely do all of these at some point."
+                bgImg="/images/learn-js/learn-csstricks-dates.jpg"
+                btns={
+                  <>
+                    <LinkButton
+                      origin="external"
+                      link="https://css-tricks.com/everything-you-need-to-know-about-date-in-javascript/">
+                      Read
+                      <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                    </LinkButton>
+                  </>
+                }></AppCard>
+              <AppCard
+                heading="Flavioscopes.com"
+                body="Flavioscopes does a great job diving into all the differnt formats for creating dates"
+                bgImg="/images/learn-js/learn-flavioscopes.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://flaviocopes.com/javascript-dates/">
+                    Read
+                    <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Dev Dreamer"
+                body="This video has a great walkthrough/codealong approach to dates."
+                bgImg="/images/learn-js/learn-dev-dreamer.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=-H6xNrnFI80">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+            </div>
+          </Container>
+        </section>
       </main>
     </>
   );
