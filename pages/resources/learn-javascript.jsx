@@ -548,6 +548,119 @@ greetByFirstName('james wilson')
             </div>
           </Container>
         </section>
+        <section id="functional" className="pt-32 pb-12">
+          <Container>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2>
+                  Object Oriented <br></br>
+                  <span className="text-secondary">JavaScript</span>
+                </h2>
+                <p className="my-5">
+                  While I’m not the biggest OOP evangelist, it’s another
+                  powerful paradigm that many programmers use. Chances are,
+                  you’re going to run into some OOP code base or OOP-based
+                  library.
+                </p>
+              </div>
+              <div className="row-start-1 lg:row-start-auto">
+                <SyntaxHighlighter language="javascript" style={dracula}>
+                  {`// oop js
+class Dog {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  bark() {
+    console.log(this.name + ': bark! bark!')
+  }
+}
+
+const Ralph = new Dog();
+Ralph.bark(); // Ralph: bark! bark!
+`}
+                </SyntaxHighlighter>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+              <AppCard
+                heading="CSS Tricks"
+                body="CSS-Tricks isn't just for CSS - they have a great introduction to OOP JS."
+                bgImg="/images/learn-js/learn-csstricks.jpg"
+                btns={
+                  <>
+                    <LinkButton
+                      origin="external"
+                      link="https://css-tricks.com/the-flavors-of-object-oriented-programming-in-javascript/">
+                      Read
+                      <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                    </LinkButton>
+                  </>
+                }></AppCard>
+              <AppCard
+                heading="MDN"
+                body="MDN has a great series on not just OOP, but also the basics of objects and prototypes."
+                bgImg="/images/learn-js/learn-md.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects">
+                    Read
+                    <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Programming with Mosh"
+                body="Mosh has great visualizations (and background music 😎)."
+                bgImg="/images/learn-js/learn-mosh.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=PFmuCDHHpwk">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Traversy Media"
+                body="Traversy Media's laid back approach to complicated topics makes intro OOP a breeze."
+                bgImg="/images/learn-js/learn-traversy-oop.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=vDJpGenyHaA">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Codesmith"
+                body="Will does a great job in this video - and he has great courses on Frontend Masters."
+                bgImg="/images/learn-js/learn-codesmith.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=aAAS9cEuFYI">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="PedroTech"
+                body="PedroTech is another favorite for a laid back approach."
+                bgImg="/images/learn-js/learn-pedrotech.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=GEuS0tfLfEY">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+            </div>
+          </Container>
+        </section>
       </main>
     </>
   );
