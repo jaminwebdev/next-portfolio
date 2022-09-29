@@ -548,7 +548,7 @@ greetByFirstName('james wilson')
             </div>
           </Container>
         </section>
-        <section id="functional" className="pt-32 pb-12">
+        <section id="oop" className="pt-32 pb-12">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -650,6 +650,120 @@ Ralph.bark(); // Ralph: bark! bark!
                 heading="PedroTech"
                 body="PedroTech is another favorite for a laid back approach."
                 bgImg="/images/learn-js/learn-pedrotech.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=GEuS0tfLfEY">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+            </div>
+          </Container>
+        </section>
+        <section id="async" className="pt-32 pb-12">
+          <Container>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2>
+                  Async <br></br>
+                  <span className="text-secondary">JavaScript</span>
+                </h2>
+                <p className="my-5">
+                  JavaScript’s single-threaded nature can make asynchronous
+                  tasks and events confusing to even intermediate developers.
+                  These resources really solidifed things for me, and now
+                  asynchronous code is second nature.
+                </p>
+              </div>
+              <div className="row-start-1 lg:row-start-auto">
+                <SyntaxHighlighter language="javascript" style={dracula}>
+                  {`// async js
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+// promise
+resolveAfter2Seconds.then(console.log)
+// async/await
+const asyncCall = async() => { 
+  const result = await resolveAfter2Seconds()
+  console.log(result)
+}
+`}
+                </SyntaxHighlighter>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+              <AppCard
+                heading="MDN"
+                body="Async can be tricky to wrap your head around. Start with the holy grail - MDN."
+                bgImg="/images/learn-js/learn-md.jpg"
+                btns={
+                  <>
+                    <LinkButton
+                      origin="external"
+                      link="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">
+                      Read
+                      <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                    </LinkButton>
+                  </>
+                }></AppCard>
+              <AppCard
+                heading="freeCodeCamp.org"
+                body="freeCodeCamp has a great breakdown for async newbies."
+                bgImg="/images/learn-js/learn-fcc-async.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.freecodecamp.org/news/asynchronous-javascript-explained/">
+                    Read
+                    <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Codevolution"
+                body="Codevolutionhas a great breakdown of all things async - history, examples, use cases, etc."
+                bgImg="/images/learn-js/learn-codevolution.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=exBgWAIeIeg">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Fun Fun Function"
+                body="Fun Fun Function's video made async far more concrete after discovering the channel."
+                bgImg="/images/learn-js/learn-fff-async.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=568g8hxJJp4">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Fireship"
+                body="Fireship is fantastic for those bite-size 5 minute breakdowns + extra tips & tricks."
+                bgImg="/images/learn-js/learn-fireship-async.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=vn3tm0quoqE">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="James Q Quick"
+                body="There's something about James's presentation that makes it all so easy."
+                bgImg="/images/learn-js/learn-quick-js.jpg"
                 btns={
                   <LinkButton
                     origin="external"
