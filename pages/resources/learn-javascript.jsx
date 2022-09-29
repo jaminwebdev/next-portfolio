@@ -775,6 +775,75 @@ const asyncCall = async() => {
             </div>
           </Container>
         </section>
+        <section id="eventLoop" className="pt-32 pb-12">
+          <Container>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2>
+                  Event Loop & <br></br>
+                  <span className="text-secondary">Web APIs</span>
+                </h2>
+                <p className="my-5">
+                  Along with asynchronous events & operations, knowing how the
+                  browser schedules when it runs what code is vital to leveling
+                  up your understanding of JavaScript.
+                </p>
+              </div>
+              <div className="row-start-1 lg:row-start-auto">
+                <SyntaxHighlighter language="javascript" style={dracula}>
+                  {`// event loop js
+console.log("First");
+setTimeout(function(){ 
+   console.log("Second"); 
+}, 0);
+console.log("Third");
+// First Third Second - why??
+`}
+                </SyntaxHighlighter>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+              <AppCard
+                heading="CodeSketched"
+                body="Codesketched has several great visualizations to make the event loop more concrete."
+                bgImg="/images/learn-js/learn-codesketch.jpg"
+                btns={
+                  <>
+                    <LinkButton
+                      origin="external"
+                      link="https://www.youtube.com/watch?v=XzXIMZMN9k4">
+                      Watch
+                      <AppIcon icon="video" classNames="w-4 stroke-white" />
+                    </LinkButton>
+                  </>
+                }></AppCard>
+              <AppCard
+                heading="JSConf"
+                body="This talk at JSConf was my first exposure to the concept. It's still excellent today."
+                bgImg="/images/learn-js/learn-jsconf.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=8aGhZQkoFbQ">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="kite withyou"
+                body="Andrew Mead does a great job in this video of walking you through some examples."
+                bgImg="/images/learn-js/learn-kite.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=FVZ-A_Akros">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+            </div>
+          </Container>
+        </section>
       </main>
     </>
   );
