@@ -844,6 +844,75 @@ console.log("Third");
             </div>
           </Container>
         </section>
+        <section id="errorHandling" className="pt-32 pb-12">
+          <Container>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2>
+                  Error <br></br>
+                  <span className="text-secondary">Handling</span>
+                </h2>
+                <p className="my-5">
+                  One of the most overlooked aspects of any bootcamp, tutorial,
+                  guide, blog, or textbook is how to code defensively and handle
+                  errors. Don’t be that developer.
+                </p>
+              </div>
+              <div className="row-start-1 lg:row-start-auto">
+                <SyntaxHighlighter language="javascript" style={dracula}>
+                  {`// error handling
+try {
+  doSomething()
+}
+catch(err) {
+  handleYourErrors(err)
+}
+`}
+                </SyntaxHighlighter>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+              <AppCard
+                heading="MDN"
+                body="MDN's ground up approach to errors and exceptions is a good place to start."
+                bgImg="/images/learn-js/learn-md.jpg"
+                btns={
+                  <>
+                    <LinkButton
+                      origin="external"
+                      link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements">
+                      Read
+                      <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                    </LinkButton>
+                  </>
+                }></AppCard>
+              <AppCard
+                heading="valentinog.com"
+                body="This blog post on valentinog.com is a robust in-depth view at error handling."
+                bgImg="/images/learn-js/learn-valentino.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.valentinog.com/blog/error/">
+                    Read
+                    <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Coding Tech"
+                body="Coding Tech is another channel I regularly peruse for any vanilla JS topic."
+                bgImg="/images/learn-js/learn-codingtech-error.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.valentinog.com/blog/error/">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+            </div>
+          </Container>
+        </section>
         <section id="dates" className="pt-32 pb-12">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
