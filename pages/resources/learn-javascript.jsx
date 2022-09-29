@@ -441,6 +441,113 @@ greeting(sayHello, "JavaScript!"); // Hello, JavaScript!
             </div>
           </Container>
         </section>
+        <section id="functional" className="pt-32 pb-12">
+          <Container>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2>
+                  Functional <br></br>
+                  <span className="text-secondary">JavaScript</span>
+                </h2>
+                <p className="my-5">
+                  The journey to mastering functional programming is a long one,
+                  as it isn’t an easy paradigm for most to intuitively
+                  understand. These introductory articles and videos are a good
+                  start.
+                </p>
+              </div>
+              <div className="row-start-1 lg:row-start-auto">
+                <SyntaxHighlighter language="javascript" style={dracula}>
+                  {`// functional js
+greet(firstLetterUppercase(getFirstName('james wilson')))
+// bit hard to read, innit?
+const greetByFirstName = 
+  compose(greet, firstLetterUppercase, getFirstName)
+
+greetByFirstName('james wilson')
+// composition makes this easier to reason about
+`}
+                </SyntaxHighlighter>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+              <AppCard
+                heading="JavaScript.plainenglish"
+                body="This article is a fantastic intro to functional programming in JS."
+                bgImg="/images/learn-js/learn-javascript-plainenglish.jpg"
+                btns={
+                  <>
+                    <LinkButton
+                      origin="external"
+                      link="https://javascript.plainenglish.io/functional-javascript-17032a113930">
+                      Read
+                      <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                    </LinkButton>
+                  </>
+                }></AppCard>
+              <AppCard
+                heading="HolyJS"
+                body="This was one of the first videos I watched to wrap my head around the what and why of functional programming."
+                bgImg="/images/learn-js/learn-holyjs.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=qtsbZarFzm8">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Fun Fun Function"
+                body="Fun Fun Function has one of my favorite series on the building blocks of functional JS."
+                bgImg="/images/learn-js/learn-fff-hof.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Fun Fun Function"
+                body="I did say this channel was one of my favorites..."
+                bgImg="/images/learn-js/learn-fff-functional.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=VGB9HbL1GHk">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Ramda"
+                body="If you're serious about functional js, Ramda is a favored library among the community."
+                bgImg="/images/learn-js/learn-ramda.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=AINnOyUVEyI">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="Lodash"
+                body="Lodash is another favorite library among the functional JS crowd. You'll probably see it more in the wild."
+                bgImg="/images/learn-js/learn-lodash.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=YyxliogSwrM">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+            </div>
+          </Container>
+        </section>
       </main>
     </>
   );

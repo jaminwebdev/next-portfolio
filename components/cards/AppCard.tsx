@@ -24,8 +24,8 @@ const AppCard = ({
   bgImg,
 }: AppCardProps) => {
   return (
-    <div className="grid grid-rows-[220px,1fr] gap-6 bg-body-color-light-secondary/50 dark:bg-body-color-dark-secondary rounded-2xl shadow-lg lg:shadow-xl shadow-primary-dark/10 p-6 pb-8">
-      <div className="rounded-xl min-h-[220px] w-full relative overflow-hidden">
+    <div className="grid grid-rows-[210px,1fr] gap-6 bg-body-color-light-secondary/50 dark:bg-body-color-dark-secondary rounded-2xl shadow-lg lg:shadow-xl shadow-primary-dark/10 p-6 pb-8">
+      <div className="rounded-xl min-h-[210px] w-full relative overflow-hidden">
         <Image src={bgImg} layout="fill" alt="" />
         <div className="flex gap-2 absolute left-2 bottom-1">
           {icons?.map((icon, index) => (
