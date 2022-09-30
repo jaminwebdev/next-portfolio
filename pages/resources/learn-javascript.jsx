@@ -139,7 +139,7 @@ const LearnJS = () => {
             </div>
           </Container>
         </section>
-        <section id="closureScope" className="pt-32 pb-12">
+        <section id="closureScope" className="pt-20 lg:pt-32 pb-12">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -178,7 +178,7 @@ outerFnVariable = 6 // error - undefined
                 </SyntaxHighlighter>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 lg:mt-24">
               <AppCard
                 heading="MDN"
                 body="Mozilla Developer Network's documentation is excellent for any topic in JS."
@@ -256,7 +256,7 @@ outerFnVariable = 6 // error - undefined
             </div>
           </Container>
         </section>
-        <section id="firstClassFunctions" className="pt-32 pb-12">
+        <section id="firstClassFunctions" className="pt-20 lg:pt-32 pb-12">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -285,7 +285,7 @@ greeting(sayHello, "JavaScript!"); // Hello, JavaScript!
                 </SyntaxHighlighter>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 lg:mt-24">
               <AppCard
                 heading="MDN"
                 body="Mozilla Developer Network's documentation is excellent for any topic in JS."
@@ -351,7 +351,7 @@ greeting(sayHello, "JavaScript!"); // Hello, JavaScript!
             </div>
           </Container>
         </section>
-        <section id="arrayMethods" className="pt-32 pb-12">
+        <section id="arrayMethods" className="pt-20 lg:pt-32 pb-12">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -375,7 +375,7 @@ greeting(sayHello, "JavaScript!"); // Hello, JavaScript!
                 </SyntaxHighlighter>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 lg:mt-24">
               <AppCard
                 heading="Web Dev Simplified"
                 body="Kyle does a great job at quickly summing up the most useful array methods."
@@ -441,7 +441,7 @@ greeting(sayHello, "JavaScript!"); // Hello, JavaScript!
             </div>
           </Container>
         </section>
-        <section id="functional" className="pt-32 pb-12">
+        <section id="functional" className="pt-20 lg:pt-32 pb-12">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -470,7 +470,7 @@ greetByFirstName('james wilson')
                 </SyntaxHighlighter>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 lg:mt-24">
               <AppCard
                 heading="JavaScript.plainenglish"
                 body="This article is a fantastic intro to functional programming in JS."
@@ -548,7 +548,7 @@ greetByFirstName('james wilson')
             </div>
           </Container>
         </section>
-        <section id="oop" className="pt-32 pb-12">
+        <section id="oop" className="pt-20 lg:pt-32 pb-12">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -583,7 +583,7 @@ Ralph.bark(); // Ralph: bark! bark!
                 </SyntaxHighlighter>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 lg:mt-24">
               <AppCard
                 heading="CSS Tricks"
                 body="CSS-Tricks isn't just for CSS - they have a great introduction to OOP JS."
@@ -661,7 +661,7 @@ Ralph.bark(); // Ralph: bark! bark!
             </div>
           </Container>
         </section>
-        <section id="async" className="pt-32 pb-12">
+        <section id="async" className="pt-20 lg:pt-32 pb-12">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -697,7 +697,7 @@ const asyncCall = async() => {
                 </SyntaxHighlighter>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 lg:mt-24">
               <AppCard
                 heading="MDN"
                 body="Async can be tricky to wrap your head around. Start with the holy grail - MDN."
@@ -775,7 +775,7 @@ const asyncCall = async() => {
             </div>
           </Container>
         </section>
-        <section id="eventLoop" className="pt-32 pb-12">
+        <section id="eventLoop" className="pt-20 lg:pt-32 pb-12">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -802,7 +802,7 @@ console.log("Third");
                 </SyntaxHighlighter>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 lg:mt-24">
               <AppCard
                 heading="CodeSketched"
                 body="Codesketched has several great visualizations to make the event loop more concrete."
@@ -844,7 +844,7 @@ console.log("Third");
             </div>
           </Container>
         </section>
-        <section id="errorHandling" className="pt-32 pb-12">
+        <section id="errorHandling" className="pt-20 lg:pt-32 pb-12">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -871,7 +871,7 @@ catch(err) {
                 </SyntaxHighlighter>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 lg:mt-24">
               <AppCard
                 heading="MDN"
                 body="MDN's ground up approach to errors and exceptions is a good place to start."
@@ -913,7 +913,7 @@ catch(err) {
             </div>
           </Container>
         </section>
-        <section id="dates" className="pt-32 pb-12">
+        <section id="dates" className="pt-20 lg:pt-32 pb-12">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -940,7 +940,7 @@ new Date('07/22/2022')
                 </SyntaxHighlighter>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 lg:mt-24">
               <AppCard
                 heading="CSS Tricks"
                 body="Creating, formatting, and comparing dates - you'll surely do all of these at some point."
@@ -980,6 +980,100 @@ new Date('07/22/2022')
                   </LinkButton>
                 }></AppCard>
             </div>
+          </Container>
+        </section>
+        <section id="events" className="pt-20 lg:pt-32 pb-12">
+          <Container>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2>
+                  Events & <br></br>
+                  <span className="text-secondary">Delegation</span>
+                </h2>
+                <p className="my-5">
+                  Although many frameworks handle events for you in an
+                  incredibly convenient fashion, there may be times you need to
+                  understand the underlying mechanics.
+                </p>
+              </div>
+              <div className="row-start-1 lg:row-start-auto">
+                <SyntaxHighlighter language="javascript" style={dracula}>
+                  {`// event propagation
+const buttonLog = () => console.log('button clicked')
+const containerLog = () => console.log('container clicked')
+
+var button = document.getElementById("button");
+var container = document.getElementById("container");
+
+button.addEventListener("click", buttonLog);
+container.addEventListener("click", containerLog);
+// button click will print
+// 'button clicked' 'container clicked'
+`}
+                </SyntaxHighlighter>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 lg:mt-24">
+              <AppCard
+                heading="javascript.info"
+                body="javascript.info has a great graphic detailing how event propagation and delegation works in the browser."
+                bgImg="/images/learn-js/learn-javascriptinfo.jpg"
+                btns={
+                  <>
+                    <LinkButton
+                      origin="external"
+                      link="https://javascript.info/event-delegation">
+                      Read
+                      <AppIcon icon="eyes" classNames="w-4 fill-white" />
+                    </LinkButton>
+                  </>
+                }></AppCard>
+              <AppCard
+                heading="Web Dev Simplified"
+                body="Kyle does a good job at providing examples and walking through how events work in JS."
+                bgImg="/images/learn-js/learn-wds-events.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=XF1_MlZ5l6M">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+              <AppCard
+                heading="dcode"
+                body="dcode gives another perspective on event propagation and delegation."
+                bgImg="/images/learn-js/learn-dcode.jpg"
+                btns={
+                  <LinkButton
+                    origin="external"
+                    link="https://www.youtube.com/watch?v=pKzf80F3O0U">
+                    Watch
+                    <AppIcon icon="video" classNames="w-4 stroke-white" />
+                  </LinkButton>
+                }></AppCard>
+            </div>
+          </Container>
+        </section>
+        <section id="jsBasics" className="pt-24 pb-12">
+          <Container>
+            <h2 className="text-center">
+              My Favorite JS <br></br>
+              <span className="text-secondary">YouTube Channels</span>
+            </h2>
+            <p className="text-center max-w-3xl mx-auto my-5 text-lg">
+              The swath of topics you’ll cover in your JavaScript career is too
+              vast to completely cover in any of the above lists. Here are my
+              favorite YouTube channels that I regularly browse.
+            </p>
+            <p>
+              ** If you’re looking for framework specific channels for say,
+              React or Vue - head over to those pages for YT channels that are
+              predominately focused around their respective frameworks. The
+              channels below have enough vanilla JS topics to be included here
+              as well:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
           </Container>
         </section>
       </main>
