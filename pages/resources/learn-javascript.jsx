@@ -9,6 +9,10 @@ import LinkButton from "../../components/buttons/LinkButton";
 import AppIcon from "../../components/AppIcon";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import ThumbnailCard from "../../components/cards/ThumbnailCard";
+import { learnJSChannels } from "../../lib/ytChannels";
+
+const ytChannels = learnJSChannels.sort((a, b) => a.heading - b.heading);
 
 const LearnJS = () => {
   return (
@@ -1055,7 +1059,7 @@ container.addEventListener("click", containerLog);
             </div>
           </Container>
         </section>
-        <section id="jsBasics" className="pt-24 pb-12">
+        <section id="favYtChannels" className="pt-24 pb-12">
           <Container>
             <h2 className="text-center">
               My Favorite JS <br></br>
@@ -1073,7 +1077,16 @@ container.addEventListener("click", containerLog);
               channels below have enough vanilla JS topics to be included here
               as well:
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+              {ytChannels.map((channel) => (
+                <ThumbnailCard
+                  key={channel.heading}
+                  img={channel.img}
+                  link={channel.link}
+                  heading={channel.heading}
+                />
+              ))}
+            </div>
           </Container>
         </section>
       </main>
