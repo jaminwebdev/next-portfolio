@@ -10,9 +10,12 @@ import AppIcon from "../../components/AppIcon";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import ThumbnailCard from "../../components/cards/ThumbnailCard";
-import { learnJSChannels } from "../../lib/ytChannels";
+import {
+  learnJSChannels,
+  sortChannelsAlphabetically,
+} from "../../lib/ytChannels";
 
-const ytChannels = learnJSChannels.sort((a, b) => a.heading - b.heading);
+const ytChannels = sortChannelsAlphabetically(learnJSChannels);
 
 const LearnJS = () => {
   return (
