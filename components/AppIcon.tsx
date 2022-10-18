@@ -5,7 +5,7 @@ interface IconComponentProps {
 
 const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
   const icons = {
-    book: () => (
+    book: (
       <svg
         className={classNames}
         viewBox="0 0 30 37"
@@ -21,7 +21,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    devices: () => (
+    devices: (
       <svg
         className={classNames}
         viewBox="0 0 40 32"
@@ -44,7 +44,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    clipboard: () => (
+    clipboard: (
       <svg
         className={classNames}
         viewBox="0 0 31 36"
@@ -67,7 +67,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    close: () => (
+    close: (
       <svg
         className={classNames}
         viewBox="0 0 35 35"
@@ -78,7 +78,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    eyes: () => (
+    eyes: (
       <svg
         className={classNames}
         viewBox="0 0 54 40"
@@ -89,7 +89,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    github: () => (
+    github: (
       <svg
         className={classNames}
         viewBox="0 0 30 30"
@@ -100,7 +100,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    menu: () => (
+    menu: (
       <svg
         className={classNames}
         viewBox="0 0 90 68"
@@ -111,7 +111,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    linkedin: () => (
+    linkedin: (
       <svg
         className={classNames}
         viewBox="0 0 25 29"
@@ -122,7 +122,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    plus: () => (
+    plus: (
       <svg
         className={classNames}
         viewBox="0 0 45 43"
@@ -134,7 +134,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    search: () => (
+    search: (
       <svg
         className={classNames}
         viewBox="0 0 35 27"
@@ -151,7 +151,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    tag: () => (
+    tag: (
       <svg
         className={classNames}
         viewBox="0 0 22 19"
@@ -171,7 +171,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    arrowLeft: () => (
+    arrowLeft: (
       <svg
         className={classNames}
         xmlns="http://www.w3.org/2000/svg"
@@ -185,7 +185,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    arrowRight: () => (
+    arrowRight: (
       <svg
         className={classNames}
         xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +199,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    paperPlane: () => (
+    paperPlane: (
       <svg
         className={classNames}
         xmlns="http://www.w3.org/2000/svg"
@@ -214,7 +214,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    chat: () => (
+    chat: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className={classNames}
@@ -235,7 +235,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    vue: () => (
+    vue: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className={classNames}
@@ -247,7 +247,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    react: () => (
+    react: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className={classNames}
@@ -275,7 +275,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    javascript: () => (
+    javascript: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className={classNames}
@@ -287,7 +287,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
         />
       </svg>
     ),
-    video: () => (
+    video: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className={classNames}
@@ -311,7 +311,7 @@ const Icon = ({ icon = "book", classNames }: IconComponentProps) => {
     ),
   };
 
-  return <>{icons[icon]()}</>;
+  return <>{icons[icon]}</>;
 };
 
 export default Icon;
