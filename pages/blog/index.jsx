@@ -32,7 +32,7 @@ const Blogs = ({ posts }) => {
               </div>
               <div className="z-10 relative grid place-content-center order-1">
                 <ScrollReveal bounce>
-                  <div className="max-w-[200px] lg:max-w-none">
+                  <div className="max-w-[300px] lg:max-w-none">
                     <Lottie
                       animationData={ContentLottie}
                       width="300px"
