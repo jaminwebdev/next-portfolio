@@ -4,6 +4,7 @@ import lottie from "lottie-web";
 
 interface LottieProps {
   animationData: any;
+  speed?: number;
   width?: string;
   height?: string;
   delay?: number;
@@ -16,6 +17,7 @@ export const Lottie = ({
   height = "auto",
   delay = 0,
   loop = false,
+  speed = 1,
 }: LottieProps) => {
   const element = useRef<HTMLDivElement>(null);
   const lottieInstance = useRef<any>();
@@ -24,18 +26,20 @@ export const Lottie = ({
     let lottieTimeout;
     if (element.current) {
       lottieTimeout = setTimeout(() => {
-        lottieInstance.current = lottie.loadAnimation({
-          animationData,
-          container: element.current,
-          loop,
-        });
+        lottieInstance.current = lottie
+          .loadAnimation({
+            animationData,
+            container: element.current,
+            loop,
+          })
+          .setSpeed(speed);
       }, delay);
     }
     return () => {
       lottieInstance.current?.destroy();
       if (lottieTimeout) clearTimeout(lottieTimeout);
     };
-  }, [animationData, delay, loop]);
+  }, [animationData, delay, loop, speed]);
 
   return <div style={{ width, height }} ref={element}></div>;
 };
