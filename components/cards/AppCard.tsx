@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import AppIcon from "../AppIcon";
+import Link from "next/link";
 
 interface AppCardProps {
   iconLinks?: string[];
@@ -8,6 +9,7 @@ interface AppCardProps {
   tagIcon?: string;
   tagLink?: string;
   heading: string;
+  headingLink?: string;
   body: string;
   btns?: JSX.Element | React.ReactNode;
   bgImg: string;
@@ -19,6 +21,7 @@ const AppCard = ({
   tagIcon,
   tagLink,
   heading,
+  headingLink,
   body,
   btns,
   bgImg,
@@ -53,7 +56,17 @@ const AppCard = ({
         ) : null}
       </div>
       <div className="grid gap-3">
-        <h3 className="font-bold text-2xl">{heading}</h3>
+        {headingLink ? (
+          <Link href={headingLink}>
+            <a>
+              <h3 className="font-bold text-2xl hover:scale-105 transition-transform duration-200">
+                {heading}
+              </h3>
+            </a>
+          </Link>
+        ) : (
+          <h3 className="font-bold text-2xl">{heading}</h3>
+        )}
         <p>{body}</p>
         {btns ? (
           <div className="mt-2 content-end grid grid-cols-[repeat(auto-fit,_minmax(130px,_max-content))] justify-between gap-4 md:gap-4 lg:gap-4">
