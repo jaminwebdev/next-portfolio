@@ -27,10 +27,10 @@ const LearnReact = () => {
           content="These free resources are the best places to start learning React"></meta>
       </Head>
       <main>
-        <header className="bg-body-color-light-secondary dark:bg-body-color-dark-secondary pt-44 pb-14 relative">
+        <header className="bg-body-color-light-secondary dark:bg-body-color-dark-secondary pt-44 pb-32 lg:pb-14 relative">
           <Container>
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[350px]">
-              <div className="grid content-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[350px] gap-10">
+              <div className="grid content-center order-2 lg:order-1">
                 <div className="pr-5 grid content-center gap-8">
                   <h1>
                     Learn <br></br>
@@ -42,9 +42,9 @@ const LearnReact = () => {
                   </h4>
                 </div>
               </div>
-              <div className="z-10 relative grid place-content-center">
+              <div className="z-10 relative grid place-content-center order-1">
                 <ScrollReveal bounce>
-                  <div className="hidden lg:block">
+                  <div className="max-w-[200px] lg:max-w-none">
                     <Lottie animationData={ReactLottie} width="200px" loop />
                   </div>
                 </ScrollReveal>
