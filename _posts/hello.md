@@ -1,9 +1,10 @@
 ---
-title: Top 5 Nuxt Modules
-featuredImg: https://i.imgur.com/F24Y91W.jpg
-tags: ["nuxt", "vue", "content-marketing"]
-date: "2020-03-17"
-metaDescription: These Nuxt modules will make your next site even better.
+title: "Top 5 Nuxt Modules"
+metaDescription: 'just some placeholder'
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut..."
+date: "2022-10-16"
+featuredImg: '/images/blog-fallback.webp'
+tags: ['vue', 'nuxt', 'frontend']
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut diam quam nulla porttitor. In eu mi bibendum neque egestas congue. Sed turpis tincidunt id aliquet risus. Massa tincidunt nunc pulvinar sapien. Dictum sit amet justo donec enim. Consequat nisl vel pretium lectus quam id.
